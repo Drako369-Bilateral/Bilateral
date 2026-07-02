@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bilateral for theatre — ambidexterity as expression</title>
-<meta name="description" content="Ambidexterity as an expressive instrument for actors, movement directors and drama schools. Release the habitual asymmetry that narrows gesture and stage presence.">
+<title>Teatro — Bilateral</title>
+<meta name="description" content="Un attore senza lato debole: presenza, peso ed espressività su entrambi i lati del corpo. Laboratori di rilascio bilaterale per attori, registi e scuole di teatro.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -16,169 +16,148 @@
   <div class="wrap nav">
     <a href="index.html" class="nav-mark">Bilateral</a>
     <ul class="nav-links">
-      <li><a href="theatre.html" aria-current="page" data-i18n="nav.theatre">Theatre</a></li>
-      <li><a href="medicine.html" data-i18n="nav.medicine">Medicine</a></li>
-      <li><a href="combat.html" data-i18n="nav.combat">Combat</a></li>
-      <li><a href="shop.html" data-i18n="nav.shop">Shop</a></li>
+      <li><a href="theatre.html" aria-current="page" data-it="Teatro" data-en="Theatre">Teatro</a></li>
+      <li><a href="medicine.html" data-it="Medicina" data-en="Medicine">Medicina</a></li>
+      <li><a href="combat.html" data-it="Combattimento" data-en="Combat">Combattimento</a></li>
+      <li><a href="symbolic.html" data-it="Simbolico" data-en="Symbolic">Simbolico</a></li>
+      <li><a href="blog.html" data-it="Blog" data-en="Blog">Blog</a></li>
+      <li><a href="research.html" data-it="Ricerca" data-en="Research">Ricerca</a></li>
+      <li><a href="shop.html" data-it="Shop" data-en="Shop">Shop</a></li>
     </ul>
     <div class="nav-right">
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button type="button" id="lang-en" class="active" onclick="setLang('en')">EN</button>
-        <button type="button" id="lang-it" onclick="setLang('it')">IT</button>
+      <div class="lang-switch" role="group" aria-label="Lingua">
+        <button type="button" id="lang-it" class="active" onclick="setLang('it')">IT</button>
+        <button type="button" id="lang-en" onclick="setLang('en')">EN</button>
       </div>
-      <a href="#contact" class="btn" data-i18n="nav.cta">Contact</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu"><span class="bars"></span></button>
+      <a class="btn" href="#contact" data-it="Contatti" data-en="Contact">Contatti</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu" onclick="toggleMenu()"><span class="bars"></span></button>
     </div>
   </div>
   <nav id="mobile-menu" class="mobile-menu" hidden>
     <ul>
-      <li><a href="theatre.html" aria-current="page" data-i18n="nav.theatre">Theatre</a></li>
-      <li><a href="medicine.html" data-i18n="nav.medicine">Medicine</a></li>
-      <li><a href="combat.html" data-i18n="nav.combat">Combat</a></li>
-      <li><a href="shop.html" data-i18n="nav.shop">Shop</a></li>
-      <li><a href="#contact" data-i18n="nav.cta">Contact</a></li>
+      <li><a href="theatre.html" aria-current="page" data-it="Teatro" data-en="Theatre">Teatro</a></li>
+      <li><a href="medicine.html" data-it="Medicina" data-en="Medicine">Medicina</a></li>
+      <li><a href="combat.html" data-it="Combattimento" data-en="Combat">Combattimento</a></li>
+      <li><a href="symbolic.html" data-it="Simbolico" data-en="Symbolic">Simbolico</a></li>
+      <li><a href="blog.html" data-it="Blog" data-en="Blog">Blog</a></li>
+      <li><a href="research.html" data-it="Ricerca" data-en="Research">Ricerca</a></li>
+      <li><a href="shop.html" data-it="Shop" data-en="Shop">Shop</a></li>
+      <li><a href="#contact" data-it="Contatti" data-en="Contact">Contatti</a></li>
     </ul>
   </nav>
 </header>
 
-<main id="top">
-
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-glyph" aria-hidden="true">
-        <div class="bar" style="height:40%"></div><div class="bar" style="height:70%"></div><div class="bar" style="height:100%"></div><div class="bar" style="height:70%"></div><div class="bar" style="height:40%"></div>
-      </div>
-      <p class="eyebrow domain" data-i18n="t.eyebrow">For actors, directors &amp; drama schools</p>
-      <h1 data-i18n="t.h1">An actor with no weak side</h1>
-      <p class="sub" data-i18n="t.sub">Ambidexterity as an expressive instrument: release the habitual asymmetry that quietly narrows gesture, weight, and stage presence.</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn" data-i18n="t.cta">Request a workshop</a>
-        <a href="index.html" class="btn ghost" data-i18n="t.back">All fields</a>
-      </div>
-    </div>
-  </section>
+<main>
+<div class="wrap hero">
+    <div class="hero-glyph"><span class="bar" style="height:14px"></span><span class="bar" style="height:24px"></span><span class="bar" style="height:34px"></span><span class="bar" style="height:24px"></span><span class="bar" style="height:14px"></span></div>
+    <p class="eyebrow domain" data-it="Teatro e performance" data-en="Theatre & performance">Teatro e performance</p>
+    <h1 data-it="Un attore senza lato debole." data-en="An actor with no weak side.">Un attore senza lato debole.</h1>
+    <p class="sub" data-it="Sul palco, il corpo racconta prima delle parole. Se un lato guida sempre, il pubblico lo sente: una diagonale che si ripete, un gesto che non arriva mai da sinistra. Bilateral libera l'altro lato." data-en="On stage, the body speaks before words. If one side always leads, the audience feels it: a diagonal that repeats, a gesture that never comes from the left. Bilateral frees the other side.">Sul palco, il corpo racconta prima delle parole. Se un lato guida sempre, il pubblico lo sente: una diagonale che si ripete, un gesto che non arriva mai da sinistra. Bilateral libera l'altro lato.</p>
+  </div>
 
   <section class="alt">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow" data-i18n="t.tension.eyebrow">The tension</p>
-        <h2 data-i18n="t.tension.title">Your body has a default — and the audience feels it</h2>
-      </div>
-      <div class="prose-narrow reveal">
-        <p data-i18n="t.tension.p1">Most performers unconsciously lead with one side. Weight settles, gestures reach, and focus turns along a habitual diagonal. On stage this reads as a limited palette: the same shapes, the same balance, the same line of intention — repeated without choice.</p>
-      </div>
+    <div class="wrap prose-narrow">
+      <p class="eyebrow domain" data-it="Il problema" data-en="The tension">Il problema</p>
+      <h2 style="margin:14px 0 24px" data-it="Il corpo ha un'abitudine, e l'abitudine si vede." data-en="The body has a habit, and the habit shows.">Il corpo ha un'abitudine, e l'abitudine si vede.</h2>
+      <p data-it="Pensa a come entri in una stanza quando qualcuno ti guarda: una spalla arriva per prima, sempre la stessa, come una porta che si apre sempre dallo stesso cardine. Questo lato preferito non è un difetto — è una strada percorsa così tante volte da non vederla più." data-en="Think of how you enter a room when someone is watching: one shoulder arrives first, always the same, like a door that always opens on the same hinge. This preferred side is not a flaw — it is a path walked so many times you no longer see it.">Pensa a come entri in una stanza quando qualcuno ti guarda: una spalla arriva per prima, sempre la stessa, come una porta che si apre sempre dallo stesso cardine. Questo lato preferito non è un difetto — è una strada percorsa così tante volte da non vederla più.</p>
+      <p class="soft" data-it="Merleau-Ponty direbbe che il corpo non è una cosa che abbiamo, ma il luogo da cui vediamo il mondo — e quel luogo, col tempo, prende un lato." data-en="Merleau-Ponty would say the body is not a thing we have, but the place from which we see the world — and that place, over time, takes a side.">Merleau-Ponty direbbe che il corpo non è una cosa che abbiamo, ma il luogo da cui vediamo il mondo — e quel luogo, col tempo, prende un lato.</p>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow" data-i18n="t.approach.eyebrow">The approach</p>
-        <h2 data-i18n="t.approach.title">Not more choreography — less restriction</h2>
+      <div class="section-head">
+        <p class="eyebrow domain" data-it="Esercizi" data-en="Exercises">Esercizi</p>
+        <h2 data-it="Provalo sul corpo" data-en="Try it in the body">Provalo sul corpo</h2>
+        <p data-it="Due esercizi per sentire — non solo capire — la differenza tra un lato imposto e un lato scelto." data-en="Two exercises to feel — not just understand — the difference between an imposed side and a chosen one.">Due esercizi per sentire — non solo capire — la differenza tra un lato imposto e un lato scelto.</p>
       </div>
-      <div class="prose-narrow reveal">
-        <p data-i18n="t.approach.p1">Bilateral doesn't add a catalogue of mirrored moves. It works subtractively: releasing the chronic co-contraction and habitual dominance that keep one side in charge, until both sides become equally available.</p>
-        <p class="soft" data-i18n="t.approach.p2">Grounded in Merleau-Ponty's body schema and in release work drawn from Yang-style Taiji, the aim is not symmetry for its own sake but freedom — the ability to choose which side leads, moment to moment.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow" data-i18n="t.gain.eyebrow">What you'll leave with</p>
-        <h2 data-i18n="t.gain.title">A wider physical vocabulary</h2>
-      </div>
-      <div class="gain-grid reveal">
-        <div class="gain-card"><h4 data-i18n="t.gain.1.t">Expanded gestural range</h4><p data-i18n="t.gain.1.b">Movement vocabulary that isn't locked to one dominant side.</p></div>
-        <div class="gain-card"><h4 data-i18n="t.gain.2.t">Balanced presence</h4><p data-i18n="t.gain.2.b">Weight and focus that read as centred, not skewed.</p></div>
-        <div class="gain-card"><h4 data-i18n="t.gain.3.t">Elective leading side</h4><p data-i18n="t.gain.3.b">Choose your lead consciously, instead of defaulting to it.</p></div>
-        <div class="gain-card"><h4 data-i18n="t.gain.4.t">Finer body awareness</h4><p data-i18n="t.gain.4.b">A sharper sense of habitual tension and how to let it go.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="offer reveal">
-        <p class="eyebrow" data-i18n="t.offer.eyebrow">The format</p>
-        <h3 data-i18n="t.offer.title">A typical workshop</h3>
-        <p data-i18n="t.offer.p">Half-day or multi-session, for individuals, companies, or drama schools. Guided bilateral release, mirror and cross-body work, and application to scene and gesture. Group size and focus are adapted to your context.</p>
-        <p class="fine" data-i18n="t.offer.fine">Delivered in person. Get in touch and we'll shape a session around your production, ensemble, or curriculum.</p>
-      </div>
-      <div style="margin-top:36px;" class="reveal">
-        <p class="eyebrow" data-i18n="t.forwho.label" style="margin-bottom:14px;">Who it's for</p>
-        <div class="forwho">
-          <span class="chip" data-i18n="t.forwho.1">Actors</span>
-          <span class="chip" data-i18n="t.forwho.2">Movement directors</span>
-          <span class="chip" data-i18n="t.forwho.3">Physical theatre</span>
-          <span class="chip" data-i18n="t.forwho.4">Drama schools</span>
-          <span class="chip" data-i18n="t.forwho.5">Dancers</span>
+      <div class="ex-list">
+        <div class="ex-card">
+          <button class="ex-head" onclick="toggleEx(this)">
+            <div><span class="ex-meta" data-it="Principiante · 15 min" data-en="Beginner · 15 min">Principiante · 15 min</span><h4 data-it="Lo specchio che non mente" data-en="The mirror that doesn't lie">Lo specchio che non mente</h4></div>
+            <span class="ex-toggle">+</span>
+          </button>
+          <div class="ex-body">
+            <p class="step-label" data-it="Cosa fare" data-en="What to do">Cosa fare</p>
+            <p data-it="Mettiti davanti a uno specchio grande. Cammina verso di esso come se entrassi in scena — naturale, senza pensare. Fermati e guarda: quale spalla è arrivata per prima? Da che parte pende il peso? Poi torna indietro e rifallo al contrario, partendo dal lato opposto. Piano. Ripeti dieci, quindici volte." data-en="Stand in front of a large mirror. Walk toward it as if stepping on stage — natural, unthinking. Stop and look: which shoulder arrived first? Which way does the weight lean? Then step back and do it in reverse, starting from the opposite side. Slowly. Repeat ten, fifteen times.">Mettiti davanti a uno specchio grande. Cammina verso di esso come se entrassi in scena — naturale, senza pensare. Fermati e guarda: quale spalla è arrivata per prima? Da che parte pende il peso? Poi torna indietro e rifallo al contrario, partendo dal lato opposto. Piano. Ripeti dieci, quindici volte.</p>
+            <p class="step-label" data-it="Cosa sentirai" data-en="What you'll feel">Cosa sentirai</p>
+            <p data-it="All'inizio un lato «parla» bene: si muove sicuro, elegante. L'altro resta muto, impacciato, come un attore che ha dimenticato la battuta. Verso la terza volta arriva uno strappo — una resistenza. Quella resistenza è il lato dominante che frena l'altro. Dopo dieci volte, lo strappo si scioglie e il viso appare più ampio." data-en="At first one side 'speaks' well: it moves sure, elegant. The other stays mute, awkward, like an actor who forgot the line. Around the third pass a snag appears — a resistance. That resistance is the dominant side braking the other. After ten passes it dissolves, and the face looks wider.">All'inizio un lato «parla» bene: si muove sicuro, elegante. L'altro resta muto, impacciato, come un attore che ha dimenticato la battuta. Verso la terza volta arriva uno strappo — una resistenza. Quella resistenza è il lato dominante che frena l'altro. Dopo dieci volte, lo strappo si scioglie e il viso appare più ampio.</p>
+            <p class="sci" data-it="Il fondamento: lo specchio chiude il circuito sensomotorio di Merleau-Ponty — vedo, agisco, percepisco il cambiamento, mi adatto. Il feedback visivo immediato accelera la riorganizzazione dello schema corporeo. Non è allenamento muscolare, è ridisegno della mappa neurale del corpo." data-en="The basis: the mirror closes Merleau-Ponty's sensorimotor loop — I see, I act, I perceive the change, I adapt. Immediate visual feedback speeds the reorganization of the body schema. This is not muscle training, but a redrawing of the body's neural map.">Il fondamento: lo specchio chiude il circuito sensomotorio di Merleau-Ponty — vedo, agisco, percepisco il cambiamento, mi adatto. Il feedback visivo immediato accelera la riorganizzazione dello schema corporeo. Non è allenamento muscolare, è ridisegno della mappa neurale del corpo.</p>
+          </div>
+        </div>
+        <div class="ex-card">
+          <button class="ex-head" onclick="toggleEx(this)">
+            <div><span class="ex-meta" data-it="Intermedio · 20 min" data-en="Intermediate · 20 min">Intermedio · 20 min</span><h4 data-it="Il peso sospeso" data-en="The suspended weight">Il peso sospeso</h4></div>
+            <span class="ex-toggle">+</span>
+          </button>
+          <div class="ex-body">
+            <p class="step-label" data-it="Cosa fare" data-en="What to do">Cosa fare</p>
+            <p data-it="In piedi, occhi chiusi. Senti dove cade il peso: quale piede preme di più? Sposta lentamente il carico del bacino da un lato all'altro, venti volte. Poi fermati e cerca il centro — non un equilibrio forzato, ma il punto neutro dove l'acqua troverebbe il suo livello. Cammina in quello stato per dieci passi." data-en="Standing, eyes closed. Feel where the weight falls: which foot presses more? Slowly shift the pelvis's load from side to side, twenty times. Then stop and seek the center — not a forced balance, but the neutral point where water would find its level. Walk in that state for ten steps.">In piedi, occhi chiusi. Senti dove cade il peso: quale piede preme di più? Sposta lentamente il carico del bacino da un lato all'altro, venti volte. Poi fermati e cerca il centro — non un equilibrio forzato, ma il punto neutro dove l'acqua troverebbe il suo livello. Cammina in quello stato per dieci passi.</p>
+            <p class="step-label" data-it="Cosa sentirai" data-en="What you'll feel">Cosa sentirai</p>
+            <p data-it="Quando il peso si centra, una tensione di fondo cade — come lasciare andare spalle che tenevi alte senza saperlo. Il bacino «respira», i passi si allungano, il braccio oscilla più libero. Per dieci passi il movimento ha una qualità nuova. Poi il corpo torna all'abitudine — ma ora la senti." data-en="When the weight centers, a background tension drops — like letting go of shoulders you were holding up without knowing. The pelvis 'breathes,' steps lengthen, the arm swings freer. For ten steps the movement has a new quality. Then the body returns to habit — but now you feel it.">Quando il peso si centra, una tensione di fondo cade — come lasciare andare spalle che tenevi alte senza saperlo. Il bacino «respira», i passi si allungano, il braccio oscilla più libero. Per dieci passi il movimento ha una qualità nuova. Poi il corpo torna all'abitudine — ma ora la senti.</p>
+            <p class="sci" data-it="Il fondamento: la «dominanza dinamica» di Sainburg. Il lato dominante è preferito anche perché il corpo lo carica cronicamente. Cambiando la distribuzione del peso — alla maniera di Feldenkrais — si cambia quale lato il sistema motorio sceglie di usare." data-en="The basis: Sainburg's 'dynamic dominance.' The dominant side is preferred partly because the body chronically loads it. Changing the weight distribution — in the manner of Feldenkrais — changes which side the motor system chooses to use.">Il fondamento: la «dominanza dinamica» di Sainburg. Il lato dominante è preferito anche perché il corpo lo carica cronicamente. Cambiando la distribuzione del peso — alla maniera di Feldenkrais — si cambia quale lato il sistema motorio sceglie di usare.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="cta-section">
+  <section class="alt">
     <div class="wrap">
-      <div class="cta-box reveal">
-        <p class="eyebrow" style="color:#8F8B7E;" data-i18n="t.final.eyebrow">Bring Bilateral to your stage</p>
-        <h2 data-i18n="t.final.title">Shape a session around your work</h2>
-        <p data-i18n="t.final.body">Tell me about your company, school, or production and we'll build a workshop around it. Leave your email and I'll follow up.</p>
-        <form class="cta-form" action="https://formspree.io/f/xzdlkbke" method="POST">
-          <label for="email" class="sr-only" data-i18n="cta.emailLabel">Email</label>
-          <input type="email" id="email" name="email" data-i18n-ph="cta.placeholder" placeholder="Your email" required>
-          <label for="message" class="sr-only" data-i18n="cta.messageLabel">Message</label>
-          <textarea id="message" name="message" data-i18n-ph="cta.messagePlaceholder" placeholder="Tell me about your company, school, or production..." required></textarea>
-          <button type="submit" class="btn on-dark" data-i18n="t.cta">Request a workshop</button>
-        </form>
+      <div class="section-head"><p class="eyebrow domain" data-it="Cosa cambia" data-en="What changes">Cosa cambia</p><h2 data-it="Cosa guadagna un attore" data-en="What an actor gains">Cosa guadagna un attore</h2></div>
+      <div class="gain-grid">
+        <div class="gain-card"><h4 data-it="Presenza piena" data-en="Full presence">Presenza piena</h4><p data-it="Occupare lo spazio da entrambi i lati, non solo dalla diagonale abituale." data-en="Occupying space from both sides, not only the habitual diagonal.">Occupare lo spazio da entrambi i lati, non solo dalla diagonale abituale.</p></div>
+        <div class="gain-card"><h4 data-it="Gesto libero" data-en="Free gesture">Gesto libero</h4><p data-it="Un gesto che può nascere a destra o a sinistra, per scelta drammatica." data-en="A gesture that can be born right or left, by dramatic choice.">Un gesto che può nascere a destra o a sinistra, per scelta drammatica.</p></div>
+        <div class="gain-card"><h4 data-it="Peso consapevole" data-en="Conscious weight">Peso consapevole</h4><p data-it="Sentire dove vive il peso e poterlo spostare a volontà." data-en="Feeling where the weight lives and shifting it at will.">Sentire dove vive il peso e poterlo spostare a volontà.</p></div>
+        <div class="gain-card"><h4 data-it="Meno tensione" data-en="Less tension">Meno tensione</h4><p data-it="Sciogliere la co-contrazione che irrigidisce e stanca sul palco." data-en="Releasing the co-contraction that stiffens and tires on stage.">Sciogliere la co-contrazione che irrigidisce e stanca sul palco.</p></div>
       </div>
     </div>
   </section>
 
+  <section>
+    <div class="wrap">
+      <div class="offer">
+        <p class="eyebrow" data-it="Il laboratorio" data-en="The workshop">Il laboratorio</p>
+        <h3 data-it="Un percorso costruito sulla tua compagnia" data-en="A path built around your company">Un percorso costruito sulla tua compagnia</h3>
+        <p data-it="Laboratori per compagnie, scuole di teatro e produzioni. Si parte dall'osservazione del corpo di ogni attore e si costruisce una sequenza di rilascio bilaterale adatta al lavoro in corso." data-en="Workshops for companies, drama schools and productions. We start from observing each actor's body and build a bilateral-release sequence suited to the work in progress.">Laboratori per compagnie, scuole di teatro e produzioni. Si parte dall'osservazione del corpo di ogni attore e si costruisce una sequenza di rilascio bilaterale adatta al lavoro in corso.</p>
+        <div class="forwho"><span class="chip" data-it="Attori" data-en="Actors">Attori</span><span class="chip" data-it="Registi" data-en="Directors">Registi</span><span class="chip" data-it="Scuole di teatro" data-en="Drama schools">Scuole di teatro</span><span class="chip" data-it="Danzatori" data-en="Dancers">Danzatori</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="contact">
+    <div class="wrap"><div class="cta-box">
+      <p class="eyebrow" style="color:#8F8B7E" data-it="Costruiamo una sessione" data-en="Let's shape a session">Costruiamo una sessione</p>
+      <h2 data-it="Un laboratorio sul tuo lavoro" data-en="A workshop around your work">Un laboratorio sul tuo lavoro</h2>
+      <p data-it="Raccontami della tua compagnia, scuola o produzione e costruiamo un laboratorio su misura." data-en="Tell me about your company, school or production and we'll build a workshop around it.">Raccontami della tua compagnia, scuola o produzione e costruiamo un laboratorio su misura.</p>
+      <form class="cta-form" action="https://formspree.io/f/xzdlkbke" method="POST">
+        <input type="email" name="email" placeholder="La tua email" data-it-ph="La tua email" data-en-ph="Your email" required>
+        <textarea name="message" placeholder="Parlami della tua compagnia o produzione..." data-it-ph="Parlami della tua compagnia o produzione..." data-en-ph="Tell me about your company or production..." required></textarea>
+        <button type="submit" class="btn on-dark" data-it="Richiedi un laboratorio" data-en="Request a workshop">Richiedi un laboratorio</button>
+      </form>
+    </div></div>
+  </section>
+</div>
+
+<!-- ============ MEDICINA ============ -->
 </main>
 
 <footer>
   <div class="wrap footer-row">
     <span class="footer-mark">Bilateral</span>
     <nav class="footer-nav">
-      <a href="theatre.html" data-i18n="nav.theatre">Theatre</a>
-      <a href="medicine.html" data-i18n="nav.medicine">Medicine</a>
-      <a href="combat.html" data-i18n="nav.combat">Combat</a>
-      <a href="shop.html" data-i18n="nav.shop">Shop</a>
+      <a href="theatre.html" data-it="Teatro" data-en="Theatre">Teatro</a>
+      <a href="medicine.html" data-it="Medicina" data-en="Medicine">Medicina</a>
+      <a href="combat.html" data-it="Combattimento" data-en="Combat">Combattimento</a>
+      <a href="symbolic.html" data-it="Simbolico" data-en="Symbolic">Simbolico</a>
+      <a href="blog.html" data-it="Blog" data-en="Blog">Blog</a>
+      <a href="research.html" data-it="Ricerca" data-en="Research">Ricerca</a>
+      <a href="shop.html" data-it="Shop" data-en="Shop">Shop</a>
     </nav>
-    <span class="footer-tag"><span data-i18n="footer.tag">Research and teaching on ambidexterity</span> — <span id="year"></span></span>
+    <span class="footer-tag" data-it="Ricerca e insegnamento sull'ambidestria · dai due meccanismi alla libertà bilaterale" data-en="Research & teaching on ambidexterity · from the two mechanisms to bilateral freedom">Ricerca e insegnamento sull'ambidestria · dai due meccanismi alla libertà bilaterale</span>
   </div>
 </footer>
 
-<script>
-window.I18N_IT = {
-  "nav.theatre":"Teatro","nav.medicine":"Medicina","nav.combat":"Combattimento","nav.shop":"Negozio","nav.cta":"Contatti",
-  "footer.tag":"Ricerca e insegnamento sull'ambidestria",
-  "cta.emailLabel":"Email","cta.placeholder":"La tua email",
-  "t.eyebrow":"Per attori, registi e scuole di teatro",
-  "t.h1":"Un attore senza lato debole",
-  "t.sub":"L'ambidestria come strumento espressivo: sciogliere l'asimmetria abituale che restringe silenziosamente gesto, peso e presenza scenica.",
-  "t.cta":"Richiedi un workshop","t.back":"Tutti i campi",
-  "t.tension.eyebrow":"La tensione","t.tension.title":"Il tuo corpo ha un lato di default — e il pubblico lo sente",
-  "t.tension.p1":"Quasi tutti gli interpreti guidano inconsciamente con un lato. Il peso si posa, i gesti si allungano e lo sguardo ruota lungo una diagonale abituale. Sul palco questo appare come una tavolozza limitata: le stesse forme, lo stesso equilibrio, la stessa linea d'intenzione — ripetuti senza scelta.",
-  "t.approach.eyebrow":"L'approccio","t.approach.title":"Non più coreografia — meno restrizione",
-  "t.approach.p1":"Bilateral non aggiunge un catalogo di movimenti speculari. Lavora per sottrazione: scioglie la co-contrazione cronica e la dominanza abituale che tengono un lato al comando, finché entrambi i lati diventano ugualmente disponibili.",
-  "t.approach.p2":"Radicato nello schema corporeo di Merleau-Ponty e nel lavoro di rilascio del Taiji stile Yang, l'obiettivo non è la simmetria fine a se stessa ma la libertà — la capacità di scegliere quale lato guida, momento per momento.",
-  "t.gain.eyebrow":"Cosa porti con te","t.gain.title":"Un vocabolario fisico più ampio",
-  "t.gain.1.t":"Gamma gestuale ampliata","t.gain.1.b":"Un vocabolario di movimento non vincolato a un solo lato dominante.",
-  "t.gain.2.t":"Presenza equilibrata","t.gain.2.b":"Peso e sguardo che appaiono centrati, non sbilanciati.",
-  "t.gain.3.t":"Lato guida elettivo","t.gain.3.b":"Scegliere consapevolmente il lato che guida, invece di subirlo.",
-  "t.gain.4.t":"Consapevolezza corporea","t.gain.4.b":"Un senso più fine della tensione abituale e di come lasciarla andare.",
-  "t.offer.eyebrow":"Il formato","t.offer.title":"Un workshop tipo",
-  "t.offer.p":"Mezza giornata o più incontri, per singoli, compagnie o scuole di teatro. Rilascio bilaterale guidato, lavoro allo specchio e crociato, e applicazione alla scena e al gesto. Dimensione del gruppo e focus adattati al tuo contesto.",
-  "t.offer.fine":"In presenza. Scrivimi e costruiremo una sessione intorno alla tua produzione, al tuo ensemble o al tuo programma.",
-  "t.forwho.label":"A chi si rivolge",
-  "t.forwho.1":"Attori","t.forwho.2":"Registi del movimento","t.forwho.3":"Teatro fisico","t.forwho.4":"Scuole di teatro","t.forwho.5":"Danzatori",
-  "t.final.eyebrow":"Porta Bilateral sul tuo palco","t.final.title":"Costruiamo una sessione sul tuo lavoro",
-  "t.final.body":"Raccontami della tua compagnia, scuola o produzione e costruiremo un workshop su misura. Lascia la tua email e ti ricontatto."
-};
-</script>
 <script src="app.js"></script>
 </body>
 </html>

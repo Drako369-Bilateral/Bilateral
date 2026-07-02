@@ -1,85 +1,68 @@
-/* ============================================================
-   Bilateral — shared behavior
-   - EN default in the HTML; IT strings provided per page as
-     window.I18N_IT (keyed by data-i18n attribute).
-   - Language choice persists across pages via localStorage.
-   ============================================================ */
-(function () {
-  "use strict";
+/* Bilateral — shared script (multipagina) */
+(function(){
+  var KEY = 'bilateral-lang';
 
-  // current year in footer
-  var y = document.getElementById("year");
-  if (y) y.textContent = new Date().getFullYear();
-
-  var IT = window.I18N_IT || {};
-
-  // cache original English text/placeholder before any switch
-  document.querySelectorAll("[data-i18n]").forEach(function (el) {
-    el.setAttribute("data-en", el.textContent);
-  });
-  document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
-    el.setAttribute("data-en-ph", el.getAttribute("placeholder") || "");
-  });
-
-  function applyLang(lang) {
-    var isIt = lang === "it";
+  window.setLang = function(lang){
+    try { localStorage.setItem(KEY, lang); } catch(e){}
     document.documentElement.lang = lang;
-
-    var enBtn = document.getElementById("lang-en");
-    var itBtn = document.getElementById("lang-it");
-    if (enBtn) enBtn.classList.toggle("active", !isIt);
-    if (itBtn) itBtn.classList.toggle("active", isIt);
-
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var key = el.getAttribute("data-i18n");
-      if (isIt && IT[key] !== undefined) {
-        el.textContent = IT[key];
-      } else {
-        el.textContent = el.getAttribute("data-en");
-      }
+    document.querySelectorAll('[data-it]').forEach(function(el){
+      var v = el.getAttribute('data-' + lang);
+      if (v !== null) el.textContent = v;
     });
-    document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
-      var key = el.getAttribute("data-i18n-ph");
-      if (isIt && IT[key] !== undefined) el.setAttribute("placeholder", IT[key]);
-      else el.setAttribute("placeholder", el.getAttribute("data-en-ph"));
+    document.querySelectorAll('[data-it-ph]').forEach(function(el){
+      var v = el.getAttribute('data-' + lang + '-ph');
+      if (v !== null) el.setAttribute('placeholder', v);
     });
+    var it = document.getElementById('lang-it');
+    var en = document.getElementById('lang-en');
+    if (it) it.classList.toggle('active', lang === 'it');
+    if (en) en.classList.toggle('active', lang === 'en');
+  };
 
-    try { localStorage.setItem("bilateral-lang", lang); } catch (e) {}
-  }
+  window.toggleMenu = function(){
+    var mm = document.getElementById('mobile-menu');
+    var btn = document.querySelector('.nav-toggle');
+    var willOpen = mm.hidden;
+    mm.hidden = !willOpen;
+    btn.setAttribute('aria-expanded', String(willOpen));
+  };
 
-  window.setLang = applyLang;
+  window.toggleEx = function(btn){ btn.parentElement.classList.toggle('open'); };
 
-  var saved = null;
-  try { saved = localStorage.getItem("bilateral-lang"); } catch (e) {}
-  if (saved === "it") applyLang("it");
+  window.dlDemo = function(e){
+    e.preventDefault();
+    var lang = (function(){ try { return localStorage.getItem('bilateral-lang') || 'it'; } catch(e){ return 'it'; } })();
+    alert(lang === 'it'
+      ? 'Download dimostrativo. Carica il PDF nella cartella del progetto su GitHub e fai puntare qui il link (es. documenti/tesi.pdf).'
+      : 'Demo download. Upload the PDF to the project folder on GitHub and point this link to it (e.g. documents/thesis.pdf).');
+    return false;
+  };
 
-  // mobile menu toggle
-  var toggle = document.querySelector(".nav-toggle");
-  var menu = document.getElementById("mobile-menu");
-  if (toggle && menu) {
-    toggle.addEventListener("click", function () {
-      var open = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!open));
-      menu.hidden = open;
-    });
-    menu.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        toggle.setAttribute("aria-expanded", "false");
-        menu.hidden = true;
-      });
-    });
-  }
+  window.notifyBuy = function(){
+    var c = document.getElementById('contact');
+    if (c) c.scrollIntoView({ behavior: 'smooth' });
+  };
 
-  // reveal on scroll
-  var els = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  // reveal on scroll (per elementi con classe .reveal)
+  function initReveal(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !els.length){
+      els.forEach(function(el){ el.classList.add('in'); });
+      return;
+    }
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ en.target.classList.add('in'); obs.unobserve(en.target); }
       });
     }, { threshold: 0.12 });
-    els.forEach(function (el) { io.observe(el); });
-  } else {
-    els.forEach(function (el) { el.classList.add("in"); });
+    els.forEach(function(el){ obs.observe(el); });
   }
+
+  // applica la lingua salvata al caricamento
+  var saved = 'it';
+  try { saved = localStorage.getItem(KEY) || 'it'; } catch(e){}
+  document.addEventListener('DOMContentLoaded', function(){
+    setLang(saved);
+    initReveal();
+  });
 })();
