@@ -29,15 +29,6 @@
 
   window.toggleEx = function(btn){ btn.parentElement.classList.toggle('open'); };
 
-  window.dlDemo = function(e){
-    e.preventDefault();
-    var lang = (function(){ try { return localStorage.getItem('bilateral-lang') || 'it'; } catch(e){ return 'it'; } })();
-    alert(lang === 'it'
-      ? 'Download dimostrativo. Carica il PDF nella cartella del progetto su GitHub e fai puntare qui il link (es. documenti/tesi.pdf).'
-      : 'Demo download. Upload the PDF to the project folder on GitHub and point this link to it (e.g. documents/thesis.pdf).');
-    return false;
-  };
-
   window.notifyBuy = function(){
     var c = document.getElementById('contact');
     if (c) c.scrollIntoView({ behavior: 'smooth' });
