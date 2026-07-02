@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bilateral — ricerca e insegnamento sull'ambidestria</title>
+<meta name="description" content="Bilateral: ricerca e insegnamento sull'ambidestria. Due meccanismi — additivo e sottrattivo — applicati a teatro, medicina, combattimento, cultura simbolica e gioco.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-home">
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" class="nav-mark">Bilateral</a>
+    <ul class="nav-links">
+      <li><a href="theatre.html" data-it="Teatro" data-en="Theatre">Teatro</a></li>
+      <li><a href="medicine.html" data-it="Medicina" data-en="Medicine">Medicina</a></li>
+      <li><a href="combat.html" data-it="Combattimento" data-en="Combat">Combattimento</a></li>
+      <li><a href="symbolic.html" data-it="Simbolico" data-en="Symbolic">Simbolico</a></li>
+      <li><a href="blog.html" data-it="Blog" data-en="Blog">Blog</a></li>
+      <li><a href="research.html" data-it="Ricerca" data-en="Research">Ricerca</a></li>
+      <li><a href="shop.html" data-it="Shop" data-en="Shop">Shop</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" role="group" aria-label="Lingua">
+        <button type="button" id="lang-it" class="active" onclick="setLang('it')">IT</button>
+        <button type="button" id="lang-en" onclick="setLang('en')">EN</button>
+      </div>
+      <a class="btn" href="#contact" data-it="Contatti" data-en="Contact">Contatti</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu" onclick="toggleMenu()"><span class="bars"></span></button>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu" hidden>
+    <ul>
+      <li><a href="theatre.html" data-it="Teatro" data-en="Theatre">Teatro</a></li>
+      <li><a href="medicine.html" data-it="Medicina" data-en="Medicine">Medicina</a></li>
+      <li><a href="combat.html" data-it="Combattimento" data-en="Combat">Combattimento</a></li>
+      <li><a href="symbolic.html" data-it="Simbolico" data-en="Symbolic">Simbolico</a></li>
+      <li><a href="blog.html" data-it="Blog" data-en="Blog">Blog</a></li>
+      <li><a href="research.html" data-it="Ricerca" data-en="Research">Ricerca</a></li>
+      <li><a href="shop.html" data-it="Shop" data-en="Shop">Shop</a></li>
+      <li><a href="#contact" data-it="Contatti" data-en="Contact">Contatti</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<div class="wrap hero">
+    <p class="eyebrow" data-it="Ricerca e insegnamento sull'ambidestria" data-en="Research & teaching on ambidexterity">Ricerca e insegnamento sull'ambidestria</p>
+    <h1 data-it="Nessun lato debole." data-en="No weak side.">Nessun lato debole.</h1>
+    <p class="sub" data-it="Bilateral studia e insegna l'ambidestria a partire da una tesi sperimentale in filosofia: non solo costruire una nuova abilità, ma liberare una simmetria che il corpo già possiede." data-en="Bilateral studies and teaches ambidexterity, grounded in an experimental thesis in philosophy: not only building a new skill, but releasing a symmetry the body already holds.">Bilateral studia e insegna l'ambidestria a partire da una tesi sperimentale in filosofia: non solo costruire una nuova abilità, ma liberare una simmetria che il corpo già possiede.</p>
+    <div class="hero-cta">
+      <button class="btn" onclick="location.href='research.html'" data-it="Leggi la ricerca" data-en="Read the research">Leggi la ricerca</button>
+      <button class="btn ghost" onclick="document.getElementById('paths').scrollIntoView()" data-it="Trova il tuo percorso" data-en="Find your path">Trova il tuo percorso</button>
+    </div>
+
+    <div class="duality">
+      <div class="duality-col additive-col">
+        <div class="mech-glyph"><span class="bar" style="height:16px"></span><span class="bar" style="height:26px"></span><span class="bar" style="height:38px"></span><span class="bar" style="height:52px"></span></div>
+        <span class="mech-tag">Additivo / Additive</span>
+        <h3 data-it="Costruire competenza" data-en="Building competence">Costruire competenza</h3>
+        <p data-it="Il meccanismo che aggiunge: allenamento, ripetizione, plasticità. Si costruisce abilità bilaterale dove prima non c'era." data-en="The mechanism that adds: training, repetition, plasticity. Bilateral skill is built where there was none.">Il meccanismo che aggiunge: allenamento, ripetizione, plasticità. Si costruisce abilità bilaterale dove prima non c'era.</p>
+      </div>
+      <div class="duality-axis"></div>
+      <div class="duality-col subtractive-col">
+        <div class="mech-glyph"><span class="bar" style="height:52px"></span><span class="bar" style="height:38px"></span><span class="bar" style="height:26px"></span><span class="bar" style="height:16px"></span></div>
+        <span class="mech-tag">Sottrattivo / Subtractive</span>
+        <h3 data-it="Liberare la simmetria" data-en="Releasing symmetry">Liberare la simmetria</h3>
+        <p data-it="Il meccanismo che toglie: si riduce la co-contrazione cronica e l'inibizione tra gli emisferi. La lateralizzazione diventa una scelta, non un'imposizione." data-en="The mechanism that removes: chronic co-contraction and interhemispheric inhibition are reduced. Lateralization becomes a choice, not an imposition.">Il meccanismo che toglie: si riduce la co-contrazione cronica e l'inibizione tra gli emisferi. La lateralizzazione diventa una scelta, non un'imposizione.</p>
+      </div>
+    </div>
+
+    <blockquote class="quote" data-it="«La libertà non è avere due lati identici, ma poter scegliere, in ogni istante, quale lato mettere avanti.»" data-en="“Freedom is not having two identical sides, but being able to choose, in each moment, which side to put forward.”">«La libertà non è avere due lati identici, ma poter scegliere, in ogni istante, quale lato mettere avanti.»</blockquote>
+  </div>
+
+  <section class="alt" id="paths">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-it="Percorsi" data-en="Paths">Percorsi</p>
+        <h2 data-it="Da dove arrivi?" data-en="Where do you come from?">Da dove arrivi?</h2>
+        <p data-it="Lo stesso principio, cinque ingressi. Scegli il campo che ti riguarda." data-en="The same principle, five doorways. Choose the field that concerns you.">Lo stesso principio, cinque ingressi. Scegli il campo che ti riguarda.</p>
+      </div>
+      <div class="path-grid">
+        <button class="path-card c-theatre" onclick="location.href='theatre.html'">
+          <span class="dot"></span>
+          <h3 data-it="Teatro" data-en="Theatre">Teatro</h3>
+          <p data-it="Un attore senza lato debole: presenza, peso ed espressività su entrambi i lati del corpo." data-en="An actor with no weak side: presence, weight and expressivity on both sides of the body.">Un attore senza lato debole: presenza, peso ed espressività su entrambi i lati del corpo.</p>
+          <span class="go" data-it="Esplora →" data-en="Explore →">Esplora →</span>
+        </button>
+        <button class="path-card c-medicine" onclick="location.href='medicine.html'">
+          <span class="dot"></span>
+          <h3 data-it="Medicina" data-en="Medicine">Medicina</h3>
+          <p data-it="Rilasciare, non solo rinforzare: distinguere il deficit di forza dalla contrazione cronica trattenuta." data-en="Release, not just strengthen: telling a strength deficit apart from held chronic contraction.">Rilasciare, non solo rinforzare: distinguere il deficit di forza dalla contrazione cronica trattenuta.</p>
+          <span class="go" data-it="Esplora →" data-en="Explore →">Esplora →</span>
+        </button>
+        <button class="path-card c-combat" onclick="location.href='combat.html'">
+          <span class="dot"></span>
+          <h3 data-it="Combattimento" data-en="Combat">Combattimento</h3>
+          <p data-it="Nessun lato debole da sfruttare: la guardia come chiave posturale del vantaggio tattico." data-en="No weak side to exploit: the guard as postural key to tactical advantage.">Nessun lato debole da sfruttare: la guardia come chiave posturale del vantaggio tattico.</p>
+          <span class="go" data-it="Esplora →" data-en="Explore →">Esplora →</span>
+        </button>
+        <button class="path-card c-symbolic" onclick="location.href='symbolic.html'">
+          <span class="dot"></span>
+          <h3 data-it="Simbolico-culturale" data-en="Symbolic-cultural">Simbolico-culturale</h3>
+          <p data-it="La simmetria bilaterale nell'arte e nel sacro: Egitto, Buddhismo, Cristianità, Islam, Taoismo." data-en="Bilateral symmetry in art and the sacred: Egypt, Buddhism, Christianity, Islam, Taoism.">La simmetria bilaterale nell'arte e nel sacro: Egitto, Buddhismo, Cristianità, Islam, Taoismo.</p>
+          <span class="go" data-it="Esplora →" data-en="Explore →">Esplora →</span>
+        </button>
+        <button class="path-card c-research" onclick="location.href='research.html'">
+          <span class="dot"></span>
+          <h3 data-it="Ricerca scientifica" data-en="Scientific research">Ricerca scientifica</h3>
+          <p data-it="La tesi, i documenti e le fonti: materiali scaricabili per studiosi e professionisti." data-en="The thesis, documents and sources: downloadable materials for scholars and professionals.">La tesi, i documenti e le fonti: materiali scaricabili per studiosi e professionisti.</p>
+          <span class="go" data-it="Esplora →" data-en="Explore →">Esplora →</span>
+        </button>
+        <button class="path-card c-blog" onclick="location.href='blog.html'">
+          <span class="dot"></span>
+          <h3 data-it="Blog" data-en="Blog">Blog</h3>
+          <p data-it="Riflessioni, esercizi e note dal cantiere teorico e pratico del progetto." data-en="Reflections, exercises and notes from the project's theoretical and practical workshop.">Riflessioni, esercizi e note dal cantiere teorico e pratico del progetto.</p>
+          <span class="go" data-it="Esplora →" data-en="Explore →">Esplora →</span>
+        </button>
+        <button class="path-card c-shop" onclick="location.href='shop.html'">
+          <span class="dot"></span>
+          <h3 data-it="Shop" data-en="Shop">Shop</h3>
+          <p data-it="Strumenti semplici per allenare la coordinazione bilaterale: bambini, adulti e professionisti." data-en="Simple tools to train bilateral coordination: children, adults and professionals.">Strumenti semplici per allenare la coordinazione bilaterale: bambini, adulti e professionisti.</p>
+          <span class="go" data-it="Esplora →" data-en="Explore →">Esplora →</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap editorial">
+      <p class="eyebrow" data-it="Il fondamento" data-en="The foundation">Il fondamento</p>
+      <p style="margin-top:18px" data-it="Bilateral nasce da una tesi sperimentale in filosofia sull'ambidestria, scritta da un laureato in filosofia e radicata nella pratica del Taiji stile Yang. Il lavoro distingue due meccanismi che portano allo stesso risultato apparente — usare bene entrambi i lati — ma per vie opposte." data-en="Bilateral grows from an experimental thesis in philosophy on ambidexterity, written by a philosophy graduate and rooted in Yang-style Taiji practice. The work distinguishes two mechanisms that lead to the same apparent result — using both sides well — but by opposite routes.">Bilateral nasce da una tesi sperimentale in filosofia sull'ambidestria, scritta da un laureato in filosofia e radicata nella pratica del Taiji stile Yang. Il lavoro distingue due meccanismi che portano allo stesso risultato apparente — usare bene entrambi i lati — ma per vie opposte.</p>
+      <p class="small" data-it="Ancore teoriche: Merleau-Ponty (schema corporeo, arco intenzionale), Varela (neurofenomenologia), Gallagher, Sainburg (dominanza dinamica). La struttura procede come un imbuto rovesciato: dai dati empirici in terza persona verso la testimonianza fenomenologica in prima persona." data-en="Theoretical anchors: Merleau-Ponty (body schema, intentional arc), Varela (neurophenomenology), Gallagher, Sainburg (dynamic dominance). The structure moves as an inverted funnel: from third-person empirical data toward first-person phenomenological testimony.">Ancore teoriche: Merleau-Ponty (schema corporeo, arco intenzionale), Varela (neurofenomenologia), Gallagher, Sainburg (dominanza dinamica). La struttura procede come un imbuto rovesciato: dai dati empirici in terza persona verso la testimonianza fenomenologica in prima persona.</p>
+      <div class="chips" style="margin-top:22px">
+        <span class="chip">Merleau-Ponty</span><span class="chip">Varela</span><span class="chip">Gallagher</span><span class="chip">Sainburg</span><span class="chip">Feldenkrais</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="contact">
+    <div class="wrap">
+      <div class="cta-box">
+        <p class="eyebrow" style="color:#8F8B7E" data-it="Resta in contatto" data-en="Stay in touch">Resta in contatto</p>
+        <h2 data-it="Segui il progetto" data-en="Follow the project">Segui il progetto</h2>
+        <p data-it="Bilateral è appena iniziato. Da qualunque campo tu arrivi — riabilitazione, arti marziali, teatro, ricerca sul movimento o lo shop — scrivimi per far parte dei primi laboratori pilota." data-en="Bilateral is just getting started. Whichever field you come from — rehabilitation, martial arts, theatre, movement research, or the shop — get in touch to join the first pilot workshops.">Bilateral è appena iniziato. Da qualunque campo tu arrivi — riabilitazione, arti marziali, teatro, ricerca sul movimento o lo shop — scrivimi per far parte dei primi laboratori pilota.</p>
+        <form class="cta-form" action="https://formspree.io/f/xzdlkbke" method="POST">
+          <input type="email" name="email" placeholder="La tua email" data-it-ph="La tua email" data-en-ph="Your email" required>
+          <textarea name="message" placeholder="Raccontami di te..." data-it-ph="Raccontami di te..." data-en-ph="Tell me about yourself..." required></textarea>
+          <button type="submit" class="btn on-dark" data-it="Contattami" data-en="Contact me">Contattami</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ TEATRO ============ -->
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span class="footer-mark">Bilateral</span>
+    <nav class="footer-nav">
+      <a href="theatre.html" data-it="Teatro" data-en="Theatre">Teatro</a>
+      <a href="medicine.html" data-it="Medicina" data-en="Medicine">Medicina</a>
+      <a href="combat.html" data-it="Combattimento" data-en="Combat">Combattimento</a>
+      <a href="symbolic.html" data-it="Simbolico" data-en="Symbolic">Simbolico</a>
+      <a href="blog.html" data-it="Blog" data-en="Blog">Blog</a>
+      <a href="research.html" data-it="Ricerca" data-en="Research">Ricerca</a>
+      <a href="shop.html" data-it="Shop" data-en="Shop">Shop</a>
+    </nav>
+    <span class="footer-tag" data-it="Ricerca e insegnamento sull'ambidestria · dai due meccanismi alla libertà bilaterale" data-en="Research & teaching on ambidexterity · from the two mechanisms to bilateral freedom">Ricerca e insegnamento sull'ambidestria · dai due meccanismi alla libertà bilaterale</span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
