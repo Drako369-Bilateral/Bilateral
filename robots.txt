@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://drako369-bilateral.github.io/Bilateral/sitemap.xml
