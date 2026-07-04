@@ -29,7 +29,7 @@ h1,h2,h3{overflow-wrap:break-word;}
 @media (max-width:640px){
   .wrap{padding:0 24px;}
   section{padding:56px 0;}
-  .hero{padding:56px 0 30px;}
+  .hero{padding-top:56px; padding-bottom:30px;}
 }
 @media (max-width:400px){ .wrap{padding:0 20px;} }
 .eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft);}
@@ -74,7 +74,7 @@ header.site{position:sticky; top:0; z-index:60; background:rgba(237,238,232,.92)
 .page{display:none;} .page.active{display:block;}
 
 /* hero */
-.hero{padding:80px 0 40px; position:relative;}
+.hero{padding-top:80px; padding-bottom:40px; position:relative;}
 .hero .eyebrow{margin-bottom:18px;}
 .hero h1{font-size:clamp(44px,8vw,92px); line-height:.99; letter-spacing:-.02em; max-width:720px;}
 .hero .sub{font-size:clamp(17px,2vw,20px); color:var(--ink-soft); max-width:600px; margin:22px 0 34px;}
