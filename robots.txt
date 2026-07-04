@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://drako369-bilateral.github.io/Bilateral/sitemap.xml
+Sitemap: https://www.bilateral.education/sitemap.xml
