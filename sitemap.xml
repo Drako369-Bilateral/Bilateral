@@ -3,67 +3,81 @@
   <url>
     <loc>https://www.bilateral.education/</loc>
     <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.bilateral.education/recitazione.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.bilateral.education/theatre.html</loc>
     <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.bilateral.education/medicine.html</loc>
     <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bilateral.education/sport.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.bilateral.education/combat.html</loc>
     <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.bilateral.education/symbolic.html</loc>
     <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.bilateral.education/research.html</loc>
     <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.bilateral.education/blog.html</loc>
     <lastmod>2026-07-04</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.bilateral.education/shop.html</loc>
     <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bilateral.education/cos-e-l-ambidestria.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bilateral.education/come-diventare-ambidestri.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bilateral.education/cos-e-la-lateralizzazione.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.bilateral.education/blog-additivo-sottrattivo.html</loc>
     <lastmod>2026-07-04</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.bilateral.education/blog-mano-che-risponde.html</loc>
     <lastmod>2026-07-04</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.bilateral.education/blog-pantocratore.html</loc>
     <lastmod>2026-07-04</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 </urlset>

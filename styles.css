@@ -256,3 +256,20 @@ footer{background:var(--footer-bg); color:var(--footer-ink); padding:44px 0;}
 .article .back{display:inline-block; margin-top:40px; font-family:var(--mono); font-size:13px; letter-spacing:.06em; color:var(--accent); text-decoration:none;}
 .article-hero{padding:70px 0 10px;}
 @media (max-width:640px){ .article-hero{padding:48px 0 6px;} .article p{font-size:17px;} }
+
+
+/* ---------- Sport (categoria verde) + sottopagine ---------- */
+body.page-sport{ --accent:var(--health); --accent-soft:var(--health-soft); }
+.path-card.c-sport .dot{ background:var(--health); }
+.crumb{ font-family:var(--mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:18px; }
+.crumb a{ color:var(--accent); text-decoration:none; }
+.crumb a:hover{ text-decoration:underline; }
+.crumb .sep{ margin:0 8px; color:var(--line); }
+.path-card.soon{ cursor:default; opacity:.72; }
+.path-card.soon:hover{ transform:none; border-color:var(--line); }
+.path-card.soon .go{ color:var(--ink-soft); }
+
+
+/* ---------- Recitazione (categoria terracotta) + sottopagine ---------- */
+body.page-recitazione{ --accent:var(--additive); --accent-soft:var(--additive-soft); }
+.path-card.c-recitazione .dot{ background:var(--additive); }
