@@ -13,6 +13,8 @@
       var v = el.getAttribute('data-' + lang + '-ph');
       if (v !== null) el.setAttribute('placeholder', v);
     });
+    document.querySelectorAll('.i18n-it').forEach(function(el){ el.style.display = (lang==='en')?'none':''; });
+    document.querySelectorAll('.i18n-en').forEach(function(el){ el.style.display = (lang==='en')?'':'none'; });
     var it = document.getElementById('lang-it');
     var en = document.getElementById('lang-en');
     if (it) it.classList.toggle('active', lang === 'it');
