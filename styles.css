@@ -254,8 +254,8 @@ footer{background:var(--footer-bg); color:var(--footer-ink); padding:44px 0;}
 .article .callout{border-left:3px solid var(--accent); background:var(--accent-soft); padding:18px 22px; border-radius:4px; margin:26px 0; font-size:16px;}
 .article .callout .lbl{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px;}
 .article .back{display:inline-block; margin-top:40px; font-family:var(--mono); font-size:13px; letter-spacing:.06em; color:var(--accent); text-decoration:none;}
-.article-hero{padding:70px 0 10px;}
-@media (max-width:640px){ .article-hero{padding:48px 0 6px;} .article p{font-size:17px;} }
+.article-hero{padding-top:70px; padding-bottom:10px;}
+@media (max-width:640px){ .article-hero{padding-top:48px; padding-bottom:6px;} .article p{font-size:17px;} }
 
 
 /* ---------- Sport (categoria verde) + sottopagine ---------- */
