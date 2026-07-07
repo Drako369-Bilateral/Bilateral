@@ -51,11 +51,18 @@
     els.forEach(function(el){ obs.observe(el); });
   }
 
+  // ----- Commenti (modulo curato, via Formspree) -----
+  window.initComments = function(){
+    var f = document.querySelector('.comment-form .js-page');
+    if (f) { f.value = document.title + ' | ' + location.pathname; }
+  };
+
   // applica la lingua salvata al caricamento
   var saved = 'it';
   try { saved = localStorage.getItem(KEY) || 'it'; } catch(e){}
   document.addEventListener('DOMContentLoaded', function(){
     setLang(saved);
     initReveal();
+    initComments();
   });
 })();

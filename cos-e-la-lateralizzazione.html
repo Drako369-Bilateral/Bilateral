@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body class="page-blog">
 
@@ -72,6 +72,19 @@
     <h2 data-it="Da leggere anche" data-en="Read more">Da leggere anche</h2>
     <p><span class="i18n-it"><a href="cos-e-l-ambidestria.html">Cos'è l'ambidestria</a> · <a href="come-diventare-ambidestri.html">Come diventare ambidestri</a> · <a href="medicine.html">Rilasciare, non rinforzare</a></span><span class="i18n-en"><a href="cos-e-l-ambidestria.html">What is ambidexterity</a> · <a href="come-diventare-ambidestri.html">How to become ambidextrous</a> · <a href="medicine.html">Release, don't strengthen</a></span></p>
     <p class="meta">2026 · Bilateral</p>
+    <section class="comments">
+      <h2 data-it="Lascia un commento" data-en="Leave a comment">Lascia un commento</h2>
+      <p class="comments-note" data-it="I commenti sono moderati: i più utili vengono pubblicati qui sotto." data-en="Comments are moderated: the most useful ones are published below.">I commenti sono moderati: i più utili vengono pubblicati qui sotto.</p>
+      <form class="comment-form" action="https://formspree.io/f/xzdlkbke" method="POST">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_subject" value="Bilateral — nuovo commento dal blog">
+        <input type="hidden" name="pagina" class="js-page" value="">
+        <input type="text" name="nome" placeholder="Il tuo nome" data-it-ph="Il tuo nome" data-en-ph="Your name" required>
+        <input type="email" name="email" placeholder="Email (non pubblicata)" data-it-ph="Email (non pubblicata)" data-en-ph="Email (not published)">
+        <textarea name="commento" placeholder="Il tuo commento..." data-it-ph="Il tuo commento..." data-en-ph="Your comment..." required></textarea>
+        <button type="submit" class="btn" data-it="Invia commento" data-en="Send comment">Invia commento</button>
+      </form>
+    </section>
     <a class="back" href="blog.html" data-it="← Torna al blog" data-en="← Back to blog">← Torna al blog</a>
   </article>
 </div>
@@ -93,6 +106,6 @@
   </div>
 </footer>
 
-<script src="app.js"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

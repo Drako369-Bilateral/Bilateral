@@ -275,3 +275,13 @@ body.page-recitazione{ --accent:var(--additive); --accent-soft:var(--additive-so
 .path-card.c-recitazione .dot{ background:var(--additive); }
 
 .i18n-en{display:none;}
+
+.comments{ max-width:720px; margin:56px auto 0; padding-top:34px; border-top:1px solid var(--line); }
+.comments h2{ font-size:24px; margin-bottom:18px; }
+.comments-todo{ color:var(--ink-soft); font-style:italic; }
+
+.comments-note{ color:var(--ink-soft); font-size:14px; margin-bottom:18px; }
+.comment-form{ display:flex; flex-direction:column; gap:12px; max-width:560px; }
+.comment-form input, .comment-form textarea{ font:inherit; padding:12px 14px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--ink); width:100%; }
+.comment-form textarea{ min-height:120px; resize:vertical; }
+.comment-form .btn{ align-self:flex-start; margin-top:4px; }
