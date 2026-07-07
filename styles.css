@@ -285,3 +285,10 @@ body.page-recitazione{ --accent:var(--additive); --accent-soft:var(--additive-so
 .comment-form input, .comment-form textarea{ font:inherit; padding:12px 14px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--ink); width:100%; }
 .comment-form textarea{ min-height:120px; resize:vertical; }
 .comment-form .btn{ align-self:flex-start; margin-top:4px; }
+
+.cookie-bar{ position:fixed; left:0; right:0; bottom:0; z-index:1000; background:var(--bg); border-top:1px solid var(--line); box-shadow:0 -6px 24px rgba(0,0,0,.10); padding:16px 20px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:14px; }
+.cookie-text{ margin:0; font-size:14px; line-height:1.5; color:var(--ink); max-width:640px; }
+.cookie-btns{ display:flex; gap:10px; flex-shrink:0; }
+.cookie-bar .btn{ padding:9px 20px; }
+.cookie-link{ cursor:pointer; }
+@media (max-width:560px){ .cookie-bar{ flex-direction:column; align-items:stretch; text-align:center; } .cookie-btns{ justify-content:center; } }
