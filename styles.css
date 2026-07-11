@@ -292,3 +292,6 @@ body.page-recitazione{ --accent:var(--additive); --accent-soft:var(--additive-so
 .cookie-bar .btn{ padding:9px 20px; }
 .cookie-link{ cursor:pointer; }
 @media (max-width:560px){ .cookie-bar{ flex-direction:column; align-items:stretch; text-align:center; } .cookie-btns{ justify-content:center; } }
+
+.footer-nav .social-ig{ display:inline-flex; align-items:center; color:var(--ink-soft); }
+.footer-nav .social-ig:hover{ color:var(--additive); }

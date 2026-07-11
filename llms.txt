@@ -10,11 +10,11 @@
 
 ## Pagine principali
 - [Home](https://www.bilateral.education/): cos'e l'ambidestria e i due meccanismi.
-- [Recitazione](https://www.bilateral.education/recitazione.html): l'attore su entrambi i lati (sottopagina: Teatro).
-- [Medicina](https://www.bilateral.education/medicine.html): rilasciare invece di rinforzare; plasticita e riabilitazione.
-- [Sport](https://www.bilateral.education/sport.html): nessun lato prevedibile (sottopagina: Combattimento).
-- [Simbolico-culturale](https://www.bilateral.education/symbolic.html): la simmetria bilaterale nell'arte e nel sacro.
+- [Recitazione](https://www.bilateral.education/recitazione/): l'attore su entrambi i lati (sottopagina: Teatro).
+- [Medicina](https://www.bilateral.education/medicine/): rilasciare invece di rinforzare; plasticita e riabilitazione.
+- [Sport](https://www.bilateral.education/sport/): nessun lato prevedibile (sottopagina: Combattimento).
+- [Simbolico-culturale](https://www.bilateral.education/symbolic/): la simmetria bilaterale nell'arte e nel sacro.
 
 ## Ricerca e fonti
-- [Tesi, estratti e bibliografia](https://www.bilateral.education/research.html): documenti liberi da scaricare e citare.
-- [Blog](https://www.bilateral.education/blog.html): riflessioni ed esercizi.
+- [Tesi, estratti e bibliografia](https://www.bilateral.education/research/): documenti liberi da scaricare e citare.
+- [Blog](https://www.bilateral.education/blog/): riflessioni ed esercizi.

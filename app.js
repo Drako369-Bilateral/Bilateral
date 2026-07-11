@@ -131,6 +131,20 @@
     if (!choice) buildCookieBanner();
   };
 
+  // ----- Collegamento Instagram (indirizzo in un solo punto) -----
+  var INSTAGRAM = 'https://www.instagram.com/bilateral.education';
+  window.initSocial = function(){
+    var nav = document.querySelector('.footer-nav');
+    if (nav && !nav.querySelector('.social-ig')){
+      var a = document.createElement('a');
+      a.href = INSTAGRAM; a.className = 'social-ig';
+      a.target = '_blank'; a.rel = 'noopener'; a.title = 'Instagram';
+      a.setAttribute('aria-label','Instagram');
+      a.innerHTML = '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"></circle></svg>';
+      nav.appendChild(a);
+    }
+  };
+
   // applica la lingua salvata al caricamento
   var saved = 'it';
   try { saved = localStorage.getItem(KEY) || 'it'; } catch(e){}
@@ -140,5 +154,6 @@
     initComments();
     initEvents();
     initConsent();
+    initSocial();
   });
 })();
