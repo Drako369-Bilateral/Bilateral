@@ -133,6 +133,7 @@
 
   // ----- Collegamento Instagram (indirizzo in un solo punto) -----
   var INSTAGRAM = 'https://www.instagram.com/bilateral.education';
+  var LINKEDIN  = 'https://www.linkedin.com/in/bilateral-education-jacopo-fedeli';
   window.initSocial = function(){
     var nav = document.querySelector('.footer-nav');
     if (nav && !nav.querySelector('.social-ig')){
@@ -142,6 +143,14 @@
       a.setAttribute('aria-label','Instagram');
       a.innerHTML = '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"></circle></svg>';
       nav.appendChild(a);
+    }
+    if (nav && !nav.querySelector('.social-li')){
+      var l = document.createElement('a');
+      l.href = LINKEDIN; l.className = 'social-li';
+      l.target = '_blank'; l.rel = 'noopener'; l.title = 'LinkedIn';
+      l.setAttribute('aria-label','LinkedIn');
+      l.innerHTML = '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><line x1="7.5" y1="10.5" x2="7.5" y2="17"></line><circle cx="7.5" cy="7" r="1.1" fill="currentColor" stroke="none"></circle><path d="M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"></path><line x1="11.5" y1="10.5" x2="11.5" y2="17"></line></svg>';
+      nav.appendChild(l);
     }
   };
 
