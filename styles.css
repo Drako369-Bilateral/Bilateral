@@ -251,8 +251,8 @@ footer{background:var(--footer-bg); color:var(--footer-ink); padding:44px 0;}
 .article .meta{font-family:var(--mono); font-size:13px; color:var(--ink-soft); margin-bottom:34px;}
 .article p{font-size:18px; line-height:1.75; margin:0 0 20px; color:var(--ink);}
 .article h2{font-size:clamp(22px,3vw,28px); margin:38px 0 12px;}
-.article .callout{border-left:3px solid var(--accent); background:var(--accent-soft); padding:18px 22px; border-radius:4px; margin:26px 0; font-size:16px;}
-.article .callout .lbl{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px;}
+.article .callout{border-left:3px solid var(--accent); background:var(--accent-soft); padding:18px 22px; border-radius:4px; margin:26px 0; font-size:16px; line-height:1.55;}
+.article .callout .lbl{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); display:block !important; width:100%; margin:0 0 9px;}
 .article .back{display:inline-block; margin-top:40px; font-family:var(--mono); font-size:13px; letter-spacing:.06em; color:var(--accent); text-decoration:none;}
 .article-hero{padding-top:70px; padding-bottom:10px;}
 @media (max-width:640px){ .article-hero{padding-top:48px; padding-bottom:6px;} .article p{font-size:17px;} }
@@ -295,3 +295,11 @@ body.page-recitazione{ --accent:var(--additive); --accent-soft:var(--additive-so
 
 .footer-nav .social-ig{ display:inline-flex; align-items:center; color:var(--ink-soft); }
 .footer-nav .social-ig:hover{ color:var(--additive); }
+
+/* Box esperimento (pratica) */
+.experiment{background:var(--accent-soft); border:1px solid var(--line); border-radius:14px; padding:22px 26px; margin:26px 0;}
+.experiment .xlbl{font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:14px;}
+.experiment ol{margin:0; padding-left:22px;}
+.experiment ol li{margin:0 0 10px; line-height:1.55;}
+.experiment ol li:last-child{margin-bottom:0;}
+.experiment .after{margin:16px 0 0; font-size:14px; color:var(--ink-soft);}

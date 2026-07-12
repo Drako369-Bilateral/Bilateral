@@ -31,7 +31,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bilateral.education/symbolic/</loc>
+    <loc>https://www.bilateral.education/cultura/</loc>
     <lastmod>2026-07-04</lastmod>
     <priority>0.7</priority>
   </url>
@@ -92,6 +92,11 @@
   </url>
   <url>
     <loc>https://www.bilateral.education/blog-pantocratore/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.bilateral.education/taoismo/</loc>
     <lastmod>2026-07-04</lastmod>
     <priority>0.7</priority>
   </url>
