@@ -382,3 +382,50 @@ body.lefty .cookie-bar{ flex-direction:row-reverse; }
 .lefty-btn[aria-pressed="true"]{ color:#BF4F2A; font-weight:600; }
 .lefty-btn .dot{ width:7px; height:7px; border-radius:50%; border:1.5px solid currentColor; }
 .lefty-btn[aria-pressed="true"] .dot{ background:currentColor; }
+
+/* ── Home: azioni, nota, livelli ── */
+.hero-actions{ display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+.btn-lg{ padding:14px 24px; font-size:15px; border-radius:4px; }
+.btn-lg.ghost:hover{ background:var(--ink); color:var(--bg); }
+
+.stats{ display:flex; gap:0; margin-top:46px; border-top:1px solid var(--line); }
+.stat{ flex:1 1 0; padding:22px 26px 4px 0; position:relative; }
+.stat + .stat{ padding-left:26px; }
+.stat + .stat:before{ content:''; position:absolute; left:0; top:22px; bottom:8px; width:1px; background:var(--line); }
+.stat-n{ display:block; font-family:var(--serif); font-size:40px; line-height:1.05; color:#BF4F2A; white-space:nowrap; }
+.stat:first-child .stat-n{ font-size:30px; }
+.stat-t{ display:block; margin-top:10px; font-size:14px; line-height:1.5; color:var(--ink-soft); max-width:230px; }
+@media (max-width:760px){
+  .stats{ flex-direction:column; }
+  .stat{ padding:18px 0 6px; }
+  .stat + .stat{ padding-left:0; border-top:1px solid var(--line); }
+  .stat + .stat:before{ display:none; }
+  .stat-n{ font-size:32px; }
+  .stat-t{ max-width:none; }
+  .hero-actions .btn-lg{ flex:1 1 100%; justify-content:center; }
+}
+
+/* Home: nota sotto le azioni */
+.hero-note{ font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; color:var(--ink-soft);
+  margin-top:14px; }
+
+
+/* Home: i tre livelli — impaginazione narrativa, come il resto del sito */
+.levels{ margin-top:48px; border-top:1px solid var(--line); }
+.level{ display:flex; gap:22px; padding:24px 0; border-bottom:1px solid var(--line); max-width:840px; }
+.level:last-child{ border-bottom:0; }
+.level-n{ flex:0 0 30px; font-family:var(--mono); font-size:12px; letter-spacing:.08em;
+  color:#BF4F2A; padding-top:7px; }
+.level-body{ flex:1 1 auto; min-width:0; }
+.level-body h3{ font-family:var(--serif); font-size:21px; line-height:1.3; margin:0 0 8px; }
+.level-body p{ font-size:15.5px; line-height:1.65; color:var(--ink-soft); margin:0; }
+.level-body a{ color:#BF4F2A; text-decoration:underline; text-underline-offset:3px; }
+@media (max-width:640px){
+  .level{ gap:14px; padding:20px 0; }
+  .level-n{ flex:0 0 24px; }
+  .level-body h3{ font-size:19px; }
+}
+
+/* Home: l'esperimento della camminata prende il colore del marchio */
+body.page-home .experiment{ background:#F6EEEA; border-color:#E8D5CC; }
+body.page-home .experiment .xlbl{ color:#BF4F2A; }
