@@ -154,6 +154,65 @@
     }
   };
 
+  // ----- Il test del lato -----
+  window.initSideTest = function(){
+    var quiz = document.getElementById('side-test');
+    if (!quiz) return;
+    var answers = {};
+    var total = quiz.querySelectorAll('.quiz-q').length;
+
+    quiz.addEventListener('click', function(e){
+      var b = e.target.closest('.quiz-opt');
+      if (!b) return;
+      var q = b.closest('.quiz-q');
+      q.querySelectorAll('.quiz-opt').forEach(function(o){ o.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+      answers[q.getAttribute('data-q')] = b.getAttribute('data-val');
+
+      if (Object.keys(answers).length < total) return;
+
+      var same = 0;
+      for (var k in answers){ if (answers[k] === 'same') same++; }
+      var key = same >= 4 ? 'netta' : (same >= 2 ? 'mista' : 'incrociata');
+
+      quiz.querySelectorAll('.quiz-res').forEach(function(r){
+        r.hidden = (r.getAttribute('data-res') !== key);
+      });
+      var wait = quiz.querySelector('.quiz-wait');
+      if (wait) wait.hidden = true;
+      if (typeof gtag === 'function'){
+        gtag('event','select_content',{content_type:'test_lato', item_id:key});
+      }
+    });
+  };
+
+  // ----- Modalita mancino: i comandi passano dall'altro lato -----
+  window.initLefty = function(){
+    var KEY = 'bilateral-lefty';
+    var on = false;
+    try { on = localStorage.getItem(KEY) === '1'; } catch(e){}
+    if (on) document.body.classList.add('lefty');
+
+    var nav = document.querySelector('.footer-nav');
+    if (!nav || nav.querySelector('.lefty-btn')) return;
+
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'lefty-btn';
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    b.innerHTML = '<span class="dot"></span><span data-it="Modalit\u00e0 mancino" data-en="Left-handed mode">Modalit\u00e0 mancino</span>';
+    b.addEventListener('click', function(){
+      var now = !document.body.classList.contains('lefty');
+      document.body.classList.toggle('lefty', now);
+      b.setAttribute('aria-pressed', now ? 'true' : 'false');
+      try { localStorage.setItem(KEY, now ? '1' : '0'); } catch(e){}
+      if (typeof gtag === 'function'){
+        gtag('event','select_content',{content_type:'modalita_mancino', item_id: now ? 'on' : 'off'});
+      }
+    });
+    nav.appendChild(b);
+  };
+
   // applica la lingua salvata al caricamento
   var saved = 'it';
   try { saved = localStorage.getItem(KEY) || 'it'; } catch(e){}
@@ -164,5 +223,7 @@
     initEvents();
     initConsent();
     initSocial();
+    initSideTest();
+    initLefty();
   });
 })();

@@ -41,7 +41,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=10">
+<link rel="stylesheet" href="/styles.css?v=14">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"it","mainEntity":[
 {"@type":"Question","name":"Cosa vuol dire ambidestro?","acceptedAnswer":{"@type":"Answer","text":"Ambidestro significa capace di usare con pari abilit\u00e0 entrambi i lati del corpo \u2014 entrambe le mani, entrambi i piedi. Non significa non avere una mano dominante: significa poter scegliere quale lato usare, invece di subire l'abitudine."}},
 {"@type":"Question","name":"Come capire se si \u00e8 ambidestri?","acceptedAnswer":{"@type":"Answer","text":"Il test non \u00e8 scrivere con la mano non dominante, ma confrontare la qualit\u00e0 del gesto. Prova lo stesso movimento preciso con entrambi i lati: se la differenza \u00e8 grande, hai una dominanza netta. Usare la sinistra per alcuni gesti indica dominanza mista, non vera ambidestria."}},
@@ -93,6 +93,58 @@
     <h2 data-it="Come capire se sei ambidestro" data-en="How to tell if you are ambidextrous">Come capire se sei ambidestro</h2>
     <p><span class="i18n-it">Molti si dicono ambidestri perché usano la sinistra per certi gesti — tagliare, lanciare, tenere il telefono. Ma questa è <em>dominanza mista</em>, non ambidestria: ogni gesto ha comunque il suo lato obbligato. Il vero test non è <em>quale</em> mano usi, ma <em>quanto bene</em>: prova lo stesso movimento preciso con entrambi i lati e confronta la qualità, non la velocità. Se la differenza è netta, hai una dominanza netta.</span><span class="i18n-en">Many call themselves ambidextrous because they use the left hand for certain tasks — cutting, throwing, holding the phone. But that is <em>mixed dominance</em>, not ambidexterity: each gesture still has its obligatory side. The real test is not <em>which</em> hand you use, but <em>how well</em>: try the same precise movement with both sides and compare quality, not speed. If the gap is clear, your dominance is clear.</span></p>
     <div class="callout"><span class="lbl" data-it="Prova subito" data-en="Try it now">Prova subito</span><span class="i18n-it">Scrivi il tuo nome con la mano dominante. Poi con l'altra. Ora nota <em>dove</em> nasce la difficoltà: nella mano, o nella spalla e nel collo che si irrigidiscono? Quasi sempre è la seconda — ed è il punto da cui parte la via sottrattiva.</span><span class="i18n-en">Write your name with your dominant hand. Then with the other. Now notice <em>where</em> the difficulty is born: in the hand, or in the shoulder and neck that stiffen? Almost always the latter — and that is where the subtractive path begins.</span></div>
+    <div class="quiz" id="side-test">
+      <span class="quiz-kicker" data-it="Il test del lato · 1 minuto" data-en="The side test · 1 minute">Il test del lato · 1 minuto</span>
+      <p class="quiz-intro"><span class="i18n-it">Cinque domande. Non misurano quanto sei bravo: misurano <strong>quanto sei libero</strong>.</span><span class="i18n-en">Five questions. They don't measure how good you are: they measure <strong>how free you are</strong>.</span></p>
+      <div class="quiz-qs">
+        <div class="quiz-q" data-q="1">
+          <p class="quiz-t"><span class="quiz-n">1</span><span data-it="Qualcuno ti lancia un oggetto senza preavviso: quale mano scatta?" data-en="Someone throws you an object without warning: which hand shoots out?">Qualcuno ti lancia un oggetto senza preavviso: quale mano scatta?</span></p>
+          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="ref" data-it="Destra" data-en="Right">Destra</button><button type="button" class="quiz-opt" data-val="ref" data-it="Sinistra" data-en="Left">Sinistra</button></div>
+        </div>
+        <div class="quiz-q" data-q="2">
+          <p class="quiz-t"><span class="quiz-n">2</span><span data-it="Con quale piede calci un pallone?" data-en="Which foot do you kick a ball with?">Con quale piede calci un pallone?</span></p>
+          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="same" data-it="Lo stesso lato" data-en="The same side">Lo stesso lato</button><button type="button" class="quiz-opt" data-val="opp" data-it="Il lato opposto" data-en="The opposite side">Il lato opposto</button></div>
+        </div>
+        <div class="quiz-q" data-q="3">
+          <p class="quiz-t"><span class="quiz-n">3</span><span data-it="Con quale mano lanci un oggetto lontano?" data-en="Which hand do you throw with?">Con quale mano lanci un oggetto lontano?</span></p>
+          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="same" data-it="Lo stesso lato" data-en="The same side">Lo stesso lato</button><button type="button" class="quiz-opt" data-val="opp" data-it="Il lato opposto" data-en="The opposite side">Il lato opposto</button></div>
+        </div>
+        <div class="quiz-q" data-q="4">
+          <p class="quiz-t"><span class="quiz-n">4</span><span data-it="Incrocia le braccia adesso. Quale avambraccio finisce sopra?" data-en="Cross your arms now. Which forearm ends up on top?">Incrocia le braccia adesso. Quale avambraccio finisce sopra?</span></p>
+          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="same" data-it="Lo stesso lato" data-en="The same side">Lo stesso lato</button><button type="button" class="quiz-opt" data-val="opp" data-it="Il lato opposto" data-en="The opposite side">Il lato opposto</button></div>
+        </div>
+        <div class="quiz-q" data-q="5">
+          <p class="quiz-t"><span class="quiz-n">5</span><span data-it="Camminando, senza pensarci: quale gamba inizia il passo?" data-en="Walking, without thinking: which leg starts the step?">Camminando, senza pensarci: quale gamba inizia il passo?</span></p>
+          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="same" data-it="Lo stesso lato" data-en="The same side">Lo stesso lato</button><button type="button" class="quiz-opt" data-val="opp" data-it="Il lato opposto" data-en="The opposite side">Il lato opposto</button></div>
+        </div>
+      </div>
+      <p class="quiz-wait" data-it="Rispondi a tutte e cinque per vedere il tuo profilo." data-en="Answer all five to see your profile.">Rispondi a tutte e cinque per vedere il tuo profilo.</p>
+        <div class="quiz-res" data-res="netta" hidden>
+          <span class="quiz-lbl" data-it="Il tuo profilo" data-en="Your profile">Il tuo profilo</span>
+          <h3 data-it="Dominanza netta" data-en="Clear dominance">Dominanza netta</h3>
+          <p><span class="i18n-it">Il tuo corpo ha scelto un lato, e lo usa per tutto. È la condizione più comune — ed è anche quella in cui la <a href="/contrazione-cronica/">catena muscolare</a> si accorcia sempre nello stesso verso. Il lato silenzioso non è incapace: è <em>trattenuto</em>. È esattamente il punto da cui parte l'<a href="/metodo/">Educazione Bilaterale</a>.</span><span class="i18n-en">Your body has chosen a side, and uses it for everything. It's the most common condition — and also the one where the <a href="/contrazione-cronica/">muscular chain</a> always shortens in the same direction. The silent side isn't incapable: it's <em>held back</em>. That is exactly where <a href="/metodo/">Bilateral Education</a> begins.</span></p>
+          <p class="quiz-cta"><a href="/metodo/" class="btn" data-it="Scopri il metodo →" data-en="Discover the method →">Scopri il metodo →</a></p>
+        </div>
+        <div class="quiz-res" data-res="mista" hidden>
+          <span class="quiz-lbl" data-it="Il tuo profilo" data-en="Your profile">Il tuo profilo</span>
+          <h3 data-it="Dominanza mista" data-en="Mixed dominance">Dominanza mista</h3>
+          <p><span class="i18n-it">Usi lati diversi per gesti diversi. Attenzione però: questa non è ambidestria. Ogni singolo gesto ha comunque il <em>suo</em> lato obbligato — la dominanza è solo distribuita, non scelta. La differenza tra subirla e sceglierla è <a href="/cos-e-l-ambidestria/">tutta qui</a>.</span><span class="i18n-en">You use different sides for different gestures. But careful: this is not ambidexterity. Every single gesture still has <em>its own</em> compulsory side — dominance is merely distributed, not chosen. The difference between suffering it and choosing it is <a href="/cos-e-l-ambidestria/">exactly this</a>.</span></p>
+          <p class="quiz-cta"><a href="/metodo/" class="btn" data-it="Scopri il metodo →" data-en="Discover the method →">Scopri il metodo →</a></p>
+        </div>
+        <div class="quiz-res" data-res="incrociata" hidden>
+          <span class="quiz-lbl" data-it="Il tuo profilo" data-en="Your profile">Il tuo profilo</span>
+          <h3 data-it="Dominanza incrociata" data-en="Crossed dominance">Dominanza incrociata</h3>
+          <p><span class="i18n-it">Il tuo corpo lavora spesso in controtendenza rispetto alla mano che scrive. È raro, ed è interessante: significa che il lato «non dominante» ha già competenze reali. Hai una base da cui partire — e il <a href="/metodo/">metodo</a> lavora proprio lì.</span><span class="i18n-en">Your body often works against the grain of your writing hand. It's rare, and interesting: it means the “non-dominant” side already has real competence. You have a base to start from — and the <a href="/metodo/">method</a> works exactly there.</span></p>
+          <p class="quiz-cta"><a href="/metodo/" class="btn" data-it="Scopri il metodo →" data-en="Discover the method →">Scopri il metodo →</a></p>
+        </div>
+      <div class="quiz-why">
+        <span class="quiz-lbl" data-it="Perché non ti chiedo con quale mano scrivi" data-en="Why I don't ask which hand you write with">Perché non ti chiedo con quale mano scrivi</span>
+        <p><span class="i18n-it">Perché la scrittura non è un gesto spontaneo: è un gesto <strong>insegnato</strong>. E nelle lingue che vanno da sinistra a destra è costruita su misura per il destrimane, che <em>tira</em> la penna allontanandola dal corpo. Il mancino deve <em>spingerla</em> — e la presa «a uncino» che molti mancini hanno è una compensazione imparata da bambini. Il movimento naturale, per lui, sarebbe la scrittura speculare: quella dei taccuini di Leonardo.</span><span class="i18n-en">Because writing is not a spontaneous gesture: it is a <strong>taught</strong> one. And in left-to-right languages it is tailored to the right-hander, who <em>pulls</em> the pen away from the body. A left-hander must <em>push</em> it — and the “hooked” grip many left-handers use is a compensation learned in childhood. The natural movement, for them, would be mirror writing: the writing of Leonardo's notebooks.</span></p>
+        <p><span class="i18n-it">Chiedere «con quale mano scrivi», quindi, non misura la dominanza: misura ciò che la scuola ha imposto al corpo — e che nel mancino <strong>produce asimmetrie</strong> invece di rivelarle. Per questo il test parte da un gesto che nessuno ti ha insegnato.</span><span class="i18n-en">Asking “which hand do you write with” therefore does not measure dominance: it measures what school imposed on the body — and in a left-hander it <strong>produces asymmetries</strong> instead of revealing them. That is why this test starts from a gesture no one taught you.</span></p>
+      </div>
+      <p class="quiz-note"><span class="i18n-it">Non è un test clinico: è uno specchio. Serve a farti notare qualcosa che il corpo fa da anni senza dirtelo.</span><span class="i18n-en">This is not a clinical test: it is a mirror. It helps you notice something your body has been doing for years without telling you.</span></p>
+    </div>
+
     <h2 data-it="Ambidestri si nasce o si diventa?" data-en="Are you born ambidextrous, or do you become it?">Ambidestri si nasce o si diventa?</h2>
     <p><span class="i18n-it">L'ambidestria innata è rarissima — riguarda circa l'1% delle persone. Nella stragrande maggioranza dei casi, <em>si diventa</em>. E questo è il cuore della questione: la <a href="/cos-e-la-lateralizzazione/">lateralizzazione</a> non è un destino scritto nel cervello, ma un'abitudine consolidata. Un'abitudine si può rinegoziare.</span><span class="i18n-en">Innate ambidexterity is very rare — about 1% of people. In the vast majority of cases, you <em>become</em> it. And this is the heart of the matter: <a href="/cos-e-la-lateralizzazione/">lateralization</a> is not a destiny written in the brain, but a consolidated habit. A habit can be renegotiated.</span></p>
     <h2 data-it="I due modi per diventare ambidestro" data-en="The two ways to become ambidextrous">I due modi per diventare ambidestro</h2>
@@ -143,6 +195,6 @@
   </div>
 </footer>
 
-<script src="/app.js?v=10"></script>
+<script src="/app.js?v=14"></script>
 </body>
 </html>

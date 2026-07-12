@@ -303,3 +303,82 @@ body.page-recitazione{ --accent:var(--additive); --accent-soft:var(--additive-so
 .experiment ol li{margin:0 0 10px; line-height:1.55;}
 .experiment ol li:last-child{margin-bottom:0;}
 .experiment .after{margin:16px 0 0; font-size:14px; color:var(--ink-soft);}
+
+/* Figura: la catena muscolare e il suo ribaltamento */
+.chain-fig{ margin:30px 0; }
+.chain-pair{ display:flex; align-items:center; justify-content:center; gap:8px; }
+.chain-half{ flex:1 1 0; min-width:0; text-align:center; }
+.chain-half svg{ width:100%; height:auto; max-width:270px; }
+.chain-vs{ font-size:26px; color:var(--accent, #BF4F2A); flex:0 0 auto; padding:0 4px; }
+.chain-lbl{ font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+            color:var(--ink-soft); margin:2px 0 0; }
+.chain-lbl.alt{ color:#BF4F2A; }
+.chain-fig figcaption{ margin:16px auto 0; max-width:560px; text-align:center; font-size:14.5px;
+            line-height:1.6; color:var(--ink-soft); }
+@media (max-width:560px){
+  .chain-pair{ flex-direction:column; gap:2px; }
+  .chain-vs{ transform:rotate(90deg); padding:6px 0; }
+  .chain-half svg{ max-width:210px; }
+}
+
+/* Il test del lato */
+.quiz{ border:1px solid var(--line); border-radius:16px; background:#fff; padding:26px 28px; margin:30px 0; }
+.quiz-kicker{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+  color:#BF4F2A; display:block; margin-bottom:10px; }
+.quiz-intro{ font-size:16px; margin:0 0 18px; }
+.quiz-qs{ margin:0; padding:0; }
+.quiz-q{ padding:14px 0; border-top:1px solid #EDEAE1; }
+.quiz-q:first-child{ border-top:0; padding-top:0; }
+.quiz-t{ margin:0 0 10px; font-size:15.5px; display:flex; align-items:baseline; gap:10px; }
+.quiz-n{ font-family:var(--mono); font-size:12px; color:#BF4F2A; flex:0 0 auto; }
+.quiz-opts{ display:flex; gap:10px; flex-wrap:wrap; padding-left:26px; }
+.quiz-opt{ font:inherit; font-size:14px; cursor:pointer; padding:8px 16px; border-radius:999px;
+  border:1px solid var(--line); background:#FBF8F1; color:var(--ink); transition:all .15s; }
+.quiz-opt:hover{ border-color:#BF4F2A; color:#BF4F2A; }
+.quiz-opt[aria-pressed="true"]{ background:#BF4F2A; border-color:#BF4F2A; color:#FBF8F1; }
+.quiz-wait{ font-family:var(--mono); font-size:12px; color:var(--ink-soft); margin:18px 0 0;
+  padding-top:16px; border-top:1px solid #EDEAE1; }
+.quiz-res{ margin-top:18px; padding-top:18px; border-top:2px solid #BF4F2A; }
+.quiz-lbl{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#BF4F2A; }
+.quiz-res h3{ font-family:var(--serif); font-size:24px; margin:6px 0 10px; }
+.quiz-res p{ font-size:16px; line-height:1.65; }
+.quiz-cta{ margin-top:16px; }
+.quiz-note{ font-size:13px; color:var(--ink-soft); font-style:italic; margin:18px 0 0;
+  padding-top:14px; border-top:1px solid #EDEAE1; }
+@media (max-width:560px){ .quiz{ padding:20px 18px; } .quiz-opts{ padding-left:0; } }
+
+.quiz-why{ background:#F6EEEA; border-left:3px solid #BF4F2A; border-radius:6px;
+  padding:16px 20px; margin:20px 0 0; }
+.quiz-why p{ font-size:14.5px; line-height:1.6; margin:8px 0 0; color:var(--ink-soft); }
+.quiz-why p:first-of-type{ margin-top:8px; }
+
+/* ── Spina dorsale: i blocchi si alternano attorno a un asse ── */
+.spine{ position:relative; padding:6px 0; }
+/* spina: respiro su schermi larghi */
+@media (min-width:1000px){ .spine{ margin-left:-70px; margin-right:-70px; } }
+.spine:before{ content:''; position:absolute; left:50%; top:10px; bottom:10px; width:2px;
+  margin-left:-1px; background:var(--line); }
+.spine .experiment{ width:calc(50% - 34px); margin:0 0 20px; position:relative; }
+.spine .experiment:nth-of-type(even){ margin-left:auto; }
+.spine .experiment:after{ content:''; position:absolute; top:26px; width:11px; height:11px;
+  border-radius:50%; background:#BF4F2A; border:2px solid var(--bg); }
+.spine .experiment:nth-of-type(odd):after{ right:-41.5px; }
+.spine .experiment:nth-of-type(even):after{ left:-41.5px; }
+@media (max-width:640px){
+  .spine:before{ left:6px; }
+  .spine .experiment{ width:calc(100% - 30px); margin-left:30px !important; }
+  .spine .experiment:after{ left:-30px !important; right:auto !important; }
+}
+
+/* ── Modalità mancino: i comandi passano dall'altro lato ── */
+body.lefty .wrap.nav{ flex-direction:row-reverse; }
+body.lefty .nav-right{ flex-direction:row-reverse; }
+body.lefty .footer-row{ flex-direction:row-reverse; }
+body.lefty .footer-nav{ flex-direction:row-reverse; }
+body.lefty .cookie-bar{ flex-direction:row-reverse; }
+.lefty-btn{ display:inline-flex; align-items:center; gap:6px; background:none; border:0;
+  font:inherit; font-size:13px; color:var(--ink-soft); cursor:pointer; padding:0; }
+.lefty-btn:hover{ color:var(--additive); }
+.lefty-btn[aria-pressed="true"]{ color:#BF4F2A; font-weight:600; }
+.lefty-btn .dot{ width:7px; height:7px; border-radius:50%; border:1.5px solid currentColor; }
+.lefty-btn[aria-pressed="true"] .dot{ background:currentColor; }
