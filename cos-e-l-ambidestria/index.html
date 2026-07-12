@@ -41,7 +41,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=20">
+<link rel="stylesheet" href="/styles.css?v=22">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"it","mainEntity":[
 {"@type":"Question","name":"Cosa vuol dire ambidestro?","acceptedAnswer":{"@type":"Answer","text":"Ambidestro significa capace di usare con pari abilit\u00e0 entrambi i lati del corpo \u2014 entrambe le mani, entrambi i piedi. Non significa non avere una mano dominante: significa poter scegliere quale lato usare, invece di subire l'abitudine."}},
 {"@type":"Question","name":"Come capire se si \u00e8 ambidestri?","acceptedAnswer":{"@type":"Answer","text":"Il test non \u00e8 scrivere con la mano non dominante, ma confrontare la qualit\u00e0 del gesto. Prova lo stesso movimento preciso con entrambi i lati: se la differenza \u00e8 grande, hai una dominanza netta. Usare la sinistra per alcuni gesti indica dominanza mista, non vera ambidestria."}},
@@ -95,30 +95,61 @@
     <div class="callout"><span class="lbl" data-it="Prova subito" data-en="Try it now">Prova subito</span><span class="i18n-it">Scrivi il tuo nome con la mano dominante. Poi con l'altra. Ora nota <em>dove</em> nasce la difficoltà: nella mano, o nella spalla e nel collo che si irrigidiscono? Quasi sempre è la seconda — ed è il punto da cui parte la via sottrattiva.</span><span class="i18n-en">Write your name with your dominant hand. Then with the other. Now notice <em>where</em> the difficulty is born: in the hand, or in the shoulder and neck that stiffen? Almost always the latter — and that is where the subtractive path begins.</span></div>
     <div class="quiz" id="side-test">
       <span class="quiz-kicker" data-it="Il test del lato · 1 minuto" data-en="The side test · 1 minute">Il test del lato · 1 minuto</span>
-      <p class="quiz-intro"><span class="i18n-it">Cinque domande. Non misurano quanto sei bravo: misurano <strong>quanto sei libero</strong>.</span><span class="i18n-en">Five questions. They don't measure how good you are: they measure <strong>how free you are</strong>.</span></p>
+      <p class="quiz-intro"><span class="i18n-it">Otto domande. Le prime cinque chiedono <em>quale</em> lato usi. Le ultime tre chiedono se lo <em>sai</em>. Non misurano quanto sei bravo: misurano <strong>quanto sei libero</strong>.</span><span class="i18n-en">Eight questions. The first five ask <em>which</em> side you use. The last three ask whether you <em>know</em> it. They don't measure how good you are: they measure <strong>how free you are</strong>.</span></p>
       <div class="quiz-qs">
         <div class="quiz-q" data-q="1">
           <p class="quiz-t"><span class="quiz-n">1</span><span data-it="Qualcuno ti lancia un oggetto senza preavviso: quale mano scatta?" data-en="Someone throws you an object without warning: which hand shoots out?">Qualcuno ti lancia un oggetto senza preavviso: quale mano scatta?</span></p>
-          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="ref" data-it="Destra" data-en="Right">Destra</button><button type="button" class="quiz-opt" data-val="ref" data-it="Sinistra" data-en="Left">Sinistra</button></div>
+          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="dx" data-it="Destra" data-en="Right">Destra</button><button type="button" class="quiz-opt" data-val="sx" data-it="Sinistra" data-en="Left">Sinistra</button></div>
         </div>
         <div class="quiz-q" data-q="2">
           <p class="quiz-t"><span class="quiz-n">2</span><span data-it="Con quale piede calci un pallone?" data-en="Which foot do you kick a ball with?">Con quale piede calci un pallone?</span></p>
-          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="same" data-it="Lo stesso lato" data-en="The same side">Lo stesso lato</button><button type="button" class="quiz-opt" data-val="opp" data-it="Il lato opposto" data-en="The opposite side">Il lato opposto</button></div>
+          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="dx" data-it="Destra" data-en="Right">Destra</button><button type="button" class="quiz-opt" data-val="sx" data-it="Sinistra" data-en="Left">Sinistra</button></div>
         </div>
         <div class="quiz-q" data-q="3">
           <p class="quiz-t"><span class="quiz-n">3</span><span data-it="Con quale mano lanci un oggetto lontano?" data-en="Which hand do you throw with?">Con quale mano lanci un oggetto lontano?</span></p>
-          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="same" data-it="Lo stesso lato" data-en="The same side">Lo stesso lato</button><button type="button" class="quiz-opt" data-val="opp" data-it="Il lato opposto" data-en="The opposite side">Il lato opposto</button></div>
+          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="dx" data-it="Destra" data-en="Right">Destra</button><button type="button" class="quiz-opt" data-val="sx" data-it="Sinistra" data-en="Left">Sinistra</button></div>
         </div>
         <div class="quiz-q" data-q="4">
           <p class="quiz-t"><span class="quiz-n">4</span><span data-it="Incrocia le braccia adesso. Quale avambraccio finisce sopra?" data-en="Cross your arms now. Which forearm ends up on top?">Incrocia le braccia adesso. Quale avambraccio finisce sopra?</span></p>
-          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="same" data-it="Lo stesso lato" data-en="The same side">Lo stesso lato</button><button type="button" class="quiz-opt" data-val="opp" data-it="Il lato opposto" data-en="The opposite side">Il lato opposto</button></div>
+          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="dx" data-it="Destra" data-en="Right">Destra</button><button type="button" class="quiz-opt" data-val="sx" data-it="Sinistra" data-en="Left">Sinistra</button></div>
         </div>
         <div class="quiz-q" data-q="5">
           <p class="quiz-t"><span class="quiz-n">5</span><span data-it="Camminando, senza pensarci: quale gamba inizia il passo?" data-en="Walking, without thinking: which leg starts the step?">Camminando, senza pensarci: quale gamba inizia il passo?</span></p>
-          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="same" data-it="Lo stesso lato" data-en="The same side">Lo stesso lato</button><button type="button" class="quiz-opt" data-val="opp" data-it="Il lato opposto" data-en="The opposite side">Il lato opposto</button></div>
+          <div class="quiz-opts"><button type="button" class="quiz-opt" data-val="dx" data-it="Destra" data-en="Right">Destra</button><button type="button" class="quiz-opt" data-val="sx" data-it="Sinistra" data-en="Left">Sinistra</button></div>
+        </div>
+        <div class="quiz-sep">
+          <span class="quiz-lbl" data-it="Ora le domande scomode" data-en="Now the awkward questions">Ora le domande scomode</span>
+          <p><span class="i18n-it">Fin qui hai detto <em>quale</em> lato usi. Adesso arriva ciò che conta davvero: <strong>lo sai, o lo subisci?</strong> Rispondi con onestà — qui non c’è una risposta che fa bella figura.</span><span class="i18n-en">So far you said <em>which</em> side you use. Now comes what really matters: <strong>do you know it, or do you suffer it?</strong> Answer honestly — there is no flattering answer here.</span></p>
+        </div>
+
+        <div class="quiz-q" data-q="6" data-type="aware">
+          <p class="quiz-t"><span class="quiz-n">6</span><span data-it="Prima di questo test, sapevi quale gamba inizia il tuo passo?" data-en="Before this test, did you know which leg starts your step?">Prima di questo test, sapevi quale gamba inizia il tuo passo?</span></p>
+          <div class="quiz-opts">
+            <button type="button" class="quiz-opt" data-val="aware" data-it="Sì, lo sapevo" data-en="Yes, I knew">Sì, lo sapevo</button>
+            <button type="button" class="quiz-opt" data-val="auto" data-it="L’ho scoperto ora, provando" data-en="I just found out, by trying">L’ho scoperto ora, provando</button>
+            <button type="button" class="quiz-opt" data-val="auto" data-it="Credevo di saperlo, ma era l’altra" data-en="I thought I knew, but it was the other">Credevo di saperlo, ma era l’altra</button>
+          </div>
+        </div>
+
+        <div class="quiz-q" data-q="7" data-type="aware">
+          <p class="quiz-t"><span class="quiz-n">7</span><span data-it="Esegui lo stesso gesto dal lato opposto. Cosa succede?" data-en="Perform the same gesture from the opposite side. What happens?">Esegui lo stesso gesto dal lato opposto. Cosa succede?</span></p>
+          <div class="quiz-opts">
+            <button type="button" class="quiz-opt" data-val="aware" data-it="Riesco a tenerlo, e resta" data-en="I can hold it, and it stays">Riesco a tenerlo, e resta</button>
+            <button type="button" class="quiz-opt" data-val="auto" data-it="Ci riesco, ma devo pensarci sempre" data-en="I manage, but I must keep thinking about it">Ci riesco, ma devo pensarci sempre</button>
+            <button type="button" class="quiz-opt" data-val="auto" data-it="Torna da solo com’era" data-en="It goes back on its own">Torna da solo com’era</button>
+          </div>
+        </div>
+
+        <div class="quiz-q" data-q="8" data-type="aware">
+          <p class="quiz-t"><span class="quiz-n">8</span><span data-it="Quando un gesto ti viene goffo dal lato debole, cosa fai?" data-en="When a gesture comes out clumsy on your weak side, what do you do?">Quando un gesto ti viene goffo dal lato debole, cosa fai?</span></p>
+          <div class="quiz-opts">
+            <button type="button" class="quiz-opt" data-val="aware" data-it="Lo lascio goffo e respiro" data-en="I let it stay clumsy and breathe">Lo lascio goffo e respiro</button>
+            <button type="button" class="quiz-opt" data-val="auto" data-it="Lo correggo finché non viene giusto" data-en="I correct it until it comes out right">Lo correggo finché non viene giusto</button>
+            <button type="button" class="quiz-opt" data-val="auto" data-it="Smetto e torno al lato forte" data-en="I stop and go back to the strong side">Smetto e torno al lato forte</button>
+          </div>
         </div>
       </div>
-      <p class="quiz-wait" data-it="Rispondi a tutte e cinque per vedere il tuo profilo." data-en="Answer all five to see your profile.">Rispondi a tutte e cinque per vedere il tuo profilo.</p>
+      <p class="quiz-wait" data-it="Rispondi a tutte e otto per vedere il tuo profilo." data-en="Answer all eight to see your profile.">Rispondi a tutte e otto per vedere il tuo profilo.</p>
         <div class="quiz-res" data-res="netta" hidden>
           <span class="quiz-lbl" data-it="Il tuo profilo" data-en="Your profile">Il tuo profilo</span>
           <h3 data-it="Dominanza netta" data-en="Clear dominance">Dominanza netta</h3>
@@ -128,13 +159,13 @@
         <div class="quiz-res" data-res="mista" hidden>
           <span class="quiz-lbl" data-it="Il tuo profilo" data-en="Your profile">Il tuo profilo</span>
           <h3 data-it="Dominanza mista" data-en="Mixed dominance">Dominanza mista</h3>
-          <p><span class="i18n-it">Usi lati diversi per gesti diversi. Attenzione però: questa non è ambidestria. Ogni singolo gesto ha comunque il <em>suo</em> lato obbligato — la dominanza è solo distribuita, non scelta. La differenza tra subirla e sceglierla è <a href="/cos-e-l-ambidestria/">tutta qui</a>.</span><span class="i18n-en">You use different sides for different gestures. But careful: this is not ambidexterity. Every single gesture still has <em>its own</em> compulsory side — dominance is merely distributed, not chosen. The difference between suffering it and choosing it is <a href="/cos-e-l-ambidestria/">exactly this</a>.</span></p>
+          <p><span class="i18n-it">Usi lati diversi per gesti diversi — ma le tue risposte dicono che <strong>non te ne accorgi mentre accade</strong>. Non è ambidestria: è dominanza <em>distribuita</em>, non scelta. Ogni gesto ha comunque il suo lato obbligato, solo che sono lati diversi. Il passo che manca non è usare l’altra mano: è <a href="/metodo/">accorgersi del gesto mentre nasce</a>.</span><span class="i18n-en">You use different sides for different gestures — but your answers say you <strong>don’t notice it as it happens</strong>. This is not ambidexterity: it is <em>distributed</em> dominance, not chosen. Every gesture still has its compulsory side; they are simply different sides. The missing step is not using the other hand: it is <a href="/metodo/">noticing the gesture as it is born</a>.</span></p>
           <p class="quiz-cta"><a href="/metodo/" class="btn" data-it="Scopri il metodo →" data-en="Discover the method →">Scopri il metodo →</a></p>
         </div>
-        <div class="quiz-res" data-res="incrociata" hidden>
+                <div class="quiz-res" data-res="bilaterale" hidden>
           <span class="quiz-lbl" data-it="Il tuo profilo" data-en="Your profile">Il tuo profilo</span>
-          <h3 data-it="Dominanza incrociata" data-en="Crossed dominance">Dominanza incrociata</h3>
-          <p><span class="i18n-it">Il tuo corpo lavora spesso in controtendenza rispetto alla mano che scrive. È raro, ed è interessante: significa che il lato «non dominante» ha già competenze reali. Hai una base da cui partire — e il <a href="/metodo/">metodo</a> lavora proprio lì.</span><span class="i18n-en">Your body often works against the grain of your writing hand. It's rare, and interesting: it means the “non-dominant” side already has real competence. You have a base to start from — and the <a href="/metodo/">method</a> works exactly there.</span></p>
+          <h3 data-it="Bilaterale" data-en="Bilateral">Bilaterale</h3>
+          <p><span class="i18n-it">Non conta quale lato usi: conta che <strong>lo sai</strong>. Senti dove nasce il gesto, e puoi sceglierlo invece di subirlo. Questa — non l’uso a caso di entrambe le mani — è la <em>lateralizzazione elettiva</em>: la dominanza non è abolita, è diventata <strong>revocabile</strong>. È il punto d’arrivo dell’<a href="/metodo/">Educazione Bilaterale</a>, e tu ci sei già vicino.</span><span class="i18n-en">It doesn’t matter which side you use: what matters is that <strong>you know it</strong>. You feel where the gesture is born, and you can choose it rather than suffer it. This — not the random use of both hands — is <em>elective lateralization</em>: dominance is not abolished, it has become <strong>revocable</strong>. It is the destination of <a href="/metodo/">Bilateral Education</a>, and you are already close.</span></p>
           <p class="quiz-cta"><a href="/metodo/" class="btn" data-it="Scopri il metodo →" data-en="Discover the method →">Scopri il metodo →</a></p>
         </div>
       <div class="quiz-why">
@@ -195,6 +226,6 @@
   </div>
 </footer>
 
-<script src="/app.js?v=14"></script>
+<script src="/app.js?v=24"></script>
 </body>
 </html>

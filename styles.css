@@ -429,3 +429,8 @@ body.lefty .cookie-bar{ flex-direction:row-reverse; }
 /* Home: l'esperimento della camminata prende il colore del marchio */
 body.page-home .experiment{ background:#F6EEEA; border-color:#E8D5CC; }
 body.page-home .experiment .xlbl{ color:#BF4F2A; }
+
+.quiz-sep{ margin:22px 0 4px; padding:16px 0 0; border-top:2px solid #BF4F2A; }
+.quiz-sep p{ font-size:15px; line-height:1.6; margin:8px 0 0; color:var(--ink-soft); }
+.quiz-q .quiz-opts{ gap:8px; }
+.quiz-opt{ text-align:left; }

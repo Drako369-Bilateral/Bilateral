@@ -68,6 +68,25 @@
     document.addEventListener('click', function(ev){
       var t = ev.target;
       if (!t || !t.closest) return;
+      // --- l'imbuto: ogni clic che porta al Metodo, e da dove parte ---
+      var a = t.closest('a[href]');
+      if (a){
+        var hr = a.getAttribute('href') || '';
+        if (hr.indexOf('/metodo/') === 0){
+          track('select_content', {
+            content_type: 'vai_al_metodo',
+            item_id: location.pathname,                       // da quale pagina
+            item_name: (a.textContent || '').trim().slice(0,40)  // quale pulsante
+          });
+        } else if (hr.indexOf('#side-test') > -1 || hr.indexOf('/cos-e-l-ambidestria/#') === 0){
+          track('select_content', { content_type: 'vai_al_test', item_id: location.pathname });
+        } else if (hr.indexOf('instagram.com') > -1){
+          track('select_content', { content_type: 'social', item_id: 'instagram' });
+        } else if (hr.indexOf('linkedin.com') > -1){
+          track('select_content', { content_type: 'social', item_id: 'linkedin' });
+        }
+      }
+
       var el = t.closest('.path-card, .blog-card, .doc-dl');
       if (!el) return;
       if (el.classList.contains('doc-dl')){
@@ -159,21 +178,39 @@
     var quiz = document.getElementById('side-test');
     if (!quiz) return;
     var answers = {};
+    var started = false;
     var total = quiz.querySelectorAll('.quiz-q').length;
 
     quiz.addEventListener('click', function(e){
       var b = e.target.closest('.quiz-opt');
       if (!b) return;
       var q = b.closest('.quiz-q');
+      if (!started){                       // la prima risposta segna l'inizio
+        started = true;
+        if (typeof gtag === 'function'){
+          gtag('event','select_content',{ content_type:'test_iniziato', item_id: location.pathname });
+        }
+      }
       q.querySelectorAll('.quiz-opt').forEach(function(o){ o.setAttribute('aria-pressed','false'); });
       b.setAttribute('aria-pressed','true');
       answers[q.getAttribute('data-q')] = b.getAttribute('data-val');
 
       if (Object.keys(answers).length < total) return;
 
-      var same = 0;
-      for (var k in answers){ if (answers[k] === 'same') same++; }
-      var key = same >= 4 ? 'netta' : (same >= 2 ? 'mista' : 'incrociata');
+      // domande 1-5: QUALE lato.  domande 6-8: lo SAI o lo subisci?
+      var ref = answers['1'];
+      var same = 0, aware = 0;
+      for (var k in answers){
+        if (k === '1') continue;
+        if (answers[k] === 'aware') aware++;
+        else if (answers[k] === 'auto') continue;
+        else if (answers[k] === ref) same++;
+      }
+      // la consapevolezza ha la precedenza: la dominanza revocabile e' bilateralita'
+      var key;
+      if (aware >= 2)      key = 'bilaterale';
+      else if (same >= 3)  key = 'netta';
+      else                 key = 'mista';
 
       quiz.querySelectorAll('.quiz-res').forEach(function(r){
         r.hidden = (r.getAttribute('data-res') !== key);
@@ -181,7 +218,11 @@
       var wait = quiz.querySelector('.quiz-wait');
       if (wait) wait.hidden = true;
       if (typeof gtag === 'function'){
-        gtag('event','select_content',{content_type:'test_lato', item_id:key});
+        gtag('event','select_content',{
+          content_type:'test_completato',
+          item_id: key,                    // netta / mista / bilaterale
+          value: aware                     // quante risposte consapevoli (0-3)
+        });
       }
     });
   };
