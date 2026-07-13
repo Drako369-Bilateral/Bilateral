@@ -73,17 +73,16 @@
       if (a){
         var hr = a.getAttribute('href') || '';
         if (hr.indexOf('/metodo/') === 0){
-          track('select_content', {
-            content_type: 'vai_al_metodo',
-            item_id: location.pathname,                       // da quale pagina
-            item_name: (a.textContent || '').trim().slice(0,40)  // quale pulsante
+          track('vai_al_metodo', {
+            da_pagina: location.pathname,                        // da quale pagina
+            pulsante: (a.textContent || '').trim().slice(0,40)   // quale pulsante
           });
         } else if (hr.indexOf('#side-test') > -1 || hr.indexOf('/cos-e-l-ambidestria/#') === 0){
-          track('select_content', { content_type: 'vai_al_test', item_id: location.pathname });
+          track('vai_al_test', { da_pagina: location.pathname });
         } else if (hr.indexOf('instagram.com') > -1){
-          track('select_content', { content_type: 'social', item_id: 'instagram' });
+          track('clic_social', { rete: 'instagram', da_pagina: location.pathname });
         } else if (hr.indexOf('linkedin.com') > -1){
-          track('select_content', { content_type: 'social', item_id: 'linkedin' });
+          track('clic_social', { rete: 'linkedin', da_pagina: location.pathname });
         }
       }
 
@@ -94,10 +93,10 @@
         track('file_download', { file_name: href.split('/').pop(), link_url: href });
       } else if (el.classList.contains('blog-card')){
         var h4 = el.querySelector('h4');
-        track('select_content', { content_type: 'articolo', item_id: (h4 ? h4.textContent.trim() : '') });
+        track('apri_articolo', { titolo: (h4 ? h4.textContent.trim() : '') });
       } else if (el.classList.contains('path-card')){
         var h3 = el.querySelector('h3');
-        track('select_content', { content_type: 'mondo', item_id: (h3 ? h3.textContent.trim() : '') });
+        track('apri_applicazione', { campo: (h3 ? h3.textContent.trim() : '') });
       }
     }, true);
     // 4) invio dei moduli (contatti e commenti)
@@ -188,7 +187,7 @@
       if (!started){                       // la prima risposta segna l'inizio
         started = true;
         if (typeof gtag === 'function'){
-          gtag('event','select_content',{ content_type:'test_iniziato', item_id: location.pathname });
+          gtag('event','test_iniziato',{ da_pagina: location.pathname });
         }
       }
       q.querySelectorAll('.quiz-opt').forEach(function(o){ o.setAttribute('aria-pressed','false'); });
@@ -218,10 +217,9 @@
       var wait = quiz.querySelector('.quiz-wait');
       if (wait) wait.hidden = true;
       if (typeof gtag === 'function'){
-        gtag('event','select_content',{
-          content_type:'test_completato',
-          item_id: key,                    // netta / mista / bilaterale
-          value: aware                     // quante risposte consapevoli (0-3)
+        gtag('event','test_completato',{
+          profilo: key,                    // netta / mista / bilaterale
+          consapevolezza: aware            // quante risposte consapevoli (0-3)
         });
       }
     });
@@ -248,7 +246,7 @@
       b.setAttribute('aria-pressed', now ? 'true' : 'false');
       try { localStorage.setItem(KEY, now ? '1' : '0'); } catch(e){}
       if (typeof gtag === 'function'){
-        gtag('event','select_content',{content_type:'modalita_mancino', item_id: now ? 'on' : 'off'});
+        gtag('event','modalita_mancino',{ stato: now ? 'on' : 'off' });
       }
     });
     nav.appendChild(b);
@@ -266,14 +264,14 @@
     // 2) il telefono PROPONE l'installazione (l'utente la vede)
     window.addEventListener('beforeinstallprompt', function(){
       if (typeof gtag === 'function'){
-        gtag('event','select_content',{ content_type:'app_proposta', item_id: location.pathname });
+        gtag('event','app_proposta',{ da_pagina: location.pathname });
       }
     });
 
     // 3) l'utente INSTALLA davvero
     window.addEventListener('appinstalled', function(){
       if (typeof gtag === 'function'){
-        gtag('event','select_content',{ content_type:'app_installata', item_id: location.pathname });
+        gtag('event','app_installata',{ da_pagina: location.pathname });
       }
     });
   };
