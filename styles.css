@@ -434,3 +434,12 @@ body.page-home .experiment .xlbl{ color:#BF4F2A; }
 .quiz-sep p{ font-size:15px; line-height:1.6; margin:8px 0 0; color:var(--ink-soft); }
 .quiz-q .quiz-opts{ gap:8px; }
 .quiz-opt{ text-align:left; }
+
+/* Il DOI della tesi */
+.doi-box{ display:inline-flex; align-items:stretch; margin:20px 0 18px;
+  border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.doi-lbl{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; background:var(--ink);
+  color:var(--bg); padding:10px 12px; display:flex; align-items:center; }
+.doi-link{ font-family:var(--mono); font-size:14px; padding:10px 16px; color:#BF4F2A;
+  text-decoration:none; background:#fff; display:flex; align-items:center; }
+.doi-link:hover{ background:#F6EEEA; }

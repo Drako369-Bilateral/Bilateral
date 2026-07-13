@@ -18,3 +18,8 @@
 ## Ricerca e fonti
 - [Tesi, estratti e bibliografia](https://www.bilateral.education/research/): documenti liberi da scaricare e citare.
 - [Blog](https://www.bilateral.education/blog/): riflessioni ed esercizi.
+
+## Fonte accademica
+Tesi sperimentale (2026), Jacopo Fausto Fedeli — DOI: 10.5281/zenodo.21321170
+https://doi.org/10.5281/zenodo.21321170
+Licenza CC BY 4.0.

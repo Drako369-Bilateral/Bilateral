@@ -254,6 +254,30 @@
     nav.appendChild(b);
   };
 
+  // ----- L'app: chi la installa, e chi torna dall'icona -----
+  window.initApp = function(){
+    // 1) chi ARRIVA gia' dall'icona (schermo intero, senza barra del browser)
+    var standalone = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches)
+                     || window.navigator.standalone === true;
+    if (typeof gtag === 'function'){
+      gtag('event', 'page_view', { app_mode: standalone ? 'app' : 'browser' });
+    }
+
+    // 2) il telefono PROPONE l'installazione (l'utente la vede)
+    window.addEventListener('beforeinstallprompt', function(){
+      if (typeof gtag === 'function'){
+        gtag('event','select_content',{ content_type:'app_proposta', item_id: location.pathname });
+      }
+    });
+
+    // 3) l'utente INSTALLA davvero
+    window.addEventListener('appinstalled', function(){
+      if (typeof gtag === 'function'){
+        gtag('event','select_content',{ content_type:'app_installata', item_id: location.pathname });
+      }
+    });
+  };
+
   // applica la lingua salvata al caricamento
   var saved = 'it';
   try { saved = localStorage.getItem(KEY) || 'it'; } catch(e){}
@@ -266,5 +290,6 @@
     initSocial();
     initSideTest();
     initLefty();
+    initApp();
   });
 })();
