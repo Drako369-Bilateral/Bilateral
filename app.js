@@ -276,6 +276,36 @@
     });
   };
 
+  // ----- I 64 koan: email -> download, senza lasciare la pagina -----
+  window.initKoan = function(){
+    var form = document.getElementById('koan-form');
+    var done = document.getElementById('koan-done');
+    if (!form || !done) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = form.querySelector('button');
+      var old = btn.textContent;
+      btn.disabled = true; btn.textContent = '...';
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(r){
+        if (!r.ok) throw new Error('ko');
+        form.hidden = true;
+        var note = document.querySelector('.koan-note');
+        if (note) note.hidden = true;
+        done.hidden = false;
+        if (typeof gtag === 'function'){
+          gtag('event','koan_richiesti',{ da_pagina: location.pathname });
+        }
+      }).catch(function(){
+        btn.disabled = false; btn.textContent = old;
+        alert('Qualcosa non ha funzionato. Riprova, o scrivimi dal modulo contatti.');
+      });
+    });
+  };
+
   // applica la lingua salvata al caricamento
   var saved = 'it';
   try { saved = localStorage.getItem(KEY) || 'it'; } catch(e){}
@@ -289,5 +319,6 @@
     initSideTest();
     initLefty();
     initApp();
+    initKoan();
   });
 })();

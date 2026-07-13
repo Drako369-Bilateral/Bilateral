@@ -443,3 +443,23 @@ body.page-home .experiment .xlbl{ color:#BF4F2A; }
 .doi-link{ font-family:var(--mono); font-size:14px; padding:10px 16px; color:#BF4F2A;
   text-decoration:none; background:#fff; display:flex; align-items:center; }
 .doi-link:hover{ background:#F6EEEA; }
+
+/* L'esca: i 64 koan in cambio dell'email */
+.koan-offer{ background:#26231D; color:#FBF8F1; border-radius:16px; padding:34px 36px; }
+.koan-lbl{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:#D07854; display:block; margin-bottom:12px; }
+.koan-offer h2{ font-family:var(--serif); font-size:27px; line-height:1.25; margin:0 0 14px; color:#FBF8F1; }
+.koan-offer p{ font-size:15.5px; line-height:1.65; color:#C9C4B7; margin:0 0 14px; }
+.koan-q{ font-family:var(--serif); font-style:italic; font-size:17px; line-height:1.6;
+  color:#FBF8F1; border-left:2px solid #D07854; padding-left:18px; margin:20px 0; }
+.koan-meta{ font-family:var(--mono); font-size:12px; letter-spacing:.04em; color:#8A8477 !important; }
+.koan-form{ display:flex; gap:10px; flex-wrap:wrap; margin-top:22px; }
+.koan-form input[type=email]{ flex:1 1 240px; padding:13px 16px; border-radius:4px; border:1px solid #45413A;
+  background:#1C1914; color:#FBF8F1; font:inherit; font-size:15px; }
+.koan-form input[type=email]::placeholder{ color:#7A7568; }
+.koan-form .btn{ background:#BF4F2A; border-color:#BF4F2A; color:#FBF8F1; padding:13px 22px; }
+.koan-form .btn:hover{ background:#D07854; border-color:#D07854; }
+.koan-note{ font-size:13px !important; color:#8A8477 !important; margin-top:14px !important; }
+.koan-done{ margin-top:22px; padding-top:20px; border-top:1px solid #45413A; }
+.koan-done .btn{ background:#FBF8F1; color:#26231D; border-color:#FBF8F1; margin-top:6px; }
+@media (max-width:560px){ .koan-offer{ padding:26px 22px; } .koan-offer h2{ font-size:22px; } }
