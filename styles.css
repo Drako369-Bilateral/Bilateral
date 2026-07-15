@@ -437,6 +437,7 @@ body.lefty .foot > div{direction:ltr;}
 
 
 /* ---- barra cookie ---- */
+.cookie-bar[hidden]{display:none !important;}
 .cookie-bar{position:fixed; left:16px; right:16px; bottom:16px; z-index:80; max-width:760px; margin:0 auto; background:var(--void-2); color:var(--chalk); border:1px solid var(--line-d); border-radius:12px; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; box-shadow:0 12px 44px rgba(0,0,0,.4);}
 .cookie-bar p{margin:0; font-size:13.5px; line-height:1.5; color:var(--chalk-soft); flex:1 1 320px;}
 .cookie-actions{display:flex; gap:12px; align-items:center;}
