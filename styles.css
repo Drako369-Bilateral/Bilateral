@@ -160,6 +160,8 @@ footer{background:var(--void); color:var(--chalk-soft); border-top:1px solid var
 
 /* --- nav: fit 7 items / collapse earlier to hamburger --- */
 .nav-links{gap:18px;}
+.nav-links a{color:#D2CBBA;}  /* higher contrast on the dark header */
+html{overflow-y:scroll;}      /* always reserve scrollbar gutter -> header aligns across all pages */
 @media (max-width:1200px){ .nav-links{display:none;} .nav-right .btn{display:none;} .nav-toggle{display:flex;} }
 /* --- home audience fork --- */
 .fork{padding:60px 0 66px;}
