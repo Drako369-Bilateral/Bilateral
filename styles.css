@@ -158,15 +158,14 @@ footer{background:var(--void); color:var(--chalk-soft); border-top:1px solid var
 .sr-only{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);}
 
 
-/* --- header B2B link --- */
-.nav-b2b{font-family:var(--mono); font-size:12.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--chalk-soft); text-decoration:none; white-space:nowrap; padding-bottom:3px; border-bottom:1px solid transparent; transition:color .15s, border-color .15s;}
-.nav-b2b:hover{color:var(--chalk); border-color:var(--amber);}
-@media (max-width:1040px){ .nav-b2b{display:none;} }
+/* --- nav: fit 7 items / collapse earlier to hamburger --- */
+.nav-links{gap:18px;}
+@media (max-width:1200px){ .nav-links{display:none;} .nav-right .btn{display:none;} .nav-toggle{display:flex;} }
 /* --- home audience fork --- */
 .fork{padding:60px 0 66px;}
 .fork-h{font-family:var(--disp); font-size:clamp(24px,3.2vw,34px); text-align:center; max-width:720px; margin:0 auto 40px; letter-spacing:-.01em; line-height:1.16;}
-.fork-grid{display:flex; gap:20px; max-width:900px; margin:0 auto;}
-.fork-card{flex:1 1 0; min-width:0; background:var(--void-2); border:1px solid var(--line-d); border-radius:14px; padding:32px 30px 28px; position:relative; overflow:hidden;}
+.fork-grid{display:flex; flex-wrap:wrap; gap:20px; max-width:900px; margin:0 auto;}
+.fork-card{flex:1 1 320px; min-width:0; background:var(--void-2); border:1px solid var(--line-d); border-radius:14px; padding:32px 30px 28px; position:relative; overflow:hidden;}
 .fork-card::before{content:""; position:absolute; left:0; top:0; height:3px; width:100%;}
 .fork-a::before{background:var(--amber);}
 .fork-b::before{background:var(--jade);}
@@ -178,7 +177,7 @@ footer{background:var(--void); color:var(--chalk-soft); border-top:1px solid var
 .fork-cta{display:inline-block; font-family:var(--mono); font-size:13px; letter-spacing:.02em; color:var(--chalk); text-decoration:none; border-bottom:1px solid var(--line-d); padding:2px 0 6px; transition:color .15s, border-color .15s;}
 .fork-a .fork-cta:hover{color:var(--amber); border-color:var(--amber);}
 .fork-b .fork-cta:hover{color:var(--jade); border-color:var(--jade);}
-@media (max-width:720px){ .fork-grid{flex-direction:column;} .fork{padding:44px 0 50px;} }
+@media (max-width:720px){ .fork{padding:44px 0 50px;} }
 
 
 
