@@ -67,7 +67,7 @@ section{padding:96px 0;}
 .on-void h1,.on-void h2,.on-void h3{color:var(--chalk);}
 .on-void .lede,.on-void p{color:#C7C1B2;}
 .on-bone-2{background:var(--bone-2);}
-.narrow{max-width:680px;}
+.narrow{max-width:680px; margin-inline:auto; }
 .lede{font-size:22px; line-height:1.5; color:var(--ink-soft);}
 .section-h2{font-size:clamp(30px,4.2vw,50px); margin-bottom:24px;}
 
@@ -567,3 +567,13 @@ body.lefty .cookie-bar{flex-direction:row-reverse;}
 .on-void .koan-form input[type=email]{background:transparent;border-color:var(--line-d);color:var(--chalk)}
 @media(max-width:600px){ .res-count{gap:8px} }
 .n-ns,.n-tot{font-variant-numeric:tabular-nums}
+
+/* Aperture di pagina centrate, coerenti con la home */
+.page-hero .narrow{text-align:center}
+.page-hero .hero-cta{justify-content:center}
+.page-hero .eyebrow{margin-left:auto;margin-right:auto}
+.page-hero .lede{margin-left:auto;margin-right:auto}
+
+/* Colonne di lettura centrate anche negli articoli */
+.art-top{margin-inline:auto}
+.article{margin-inline:auto}
