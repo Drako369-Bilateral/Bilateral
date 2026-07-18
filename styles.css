@@ -471,3 +471,99 @@ body.lefty .cookie-bar{flex-direction:row-reverse;}
 .social{display:flex; gap:14px; margin-top:18px;}
 .social a{color:var(--chalk-soft); display:inline-flex; transition:color .15s ease;}
 .social a:hover{color:var(--amber);}
+
+/* ===== METODO — assi, formula, ruota, livelli ===== */
+
+/* Tre assi paralleli (non una sequenza: nessuna numerazione) */
+.axes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:46px;background:var(--line-d);border:1px solid var(--line-d)}
+.axes .ax{background:var(--void);padding:30px 26px 26px}
+.ax-k{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--stone);margin:0 0 14px}
+.ax h3{font-family:var(--disp);font-weight:500;font-size:21px;color:var(--chalk);margin:0 0 10px;letter-spacing:-.01em}
+.ax p{margin:0;font-size:16px;line-height:1.62;color:#C7C1B2}
+.ax-fig{margin:0 0 18px}
+.ax-fig img{width:100%;height:auto;display:block}
+.ax-opts{display:flex;align-items:center;gap:10px;margin:16px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--stone)}
+.ax-opts b{font-weight:400;color:var(--chalk)}
+.ax-opts .sep{width:18px;height:1px;background:var(--line-d);flex:none}
+
+/* Piastra formula: il momento tipografico della pagina */
+.formula{margin:56px auto 0;max-width:720px;text-align:center;border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d);padding:38px 20px}
+.formula .eq{font-family:var(--disp);font-weight:500;font-size:clamp(21px,3.1vw,32px);letter-spacing:-.01em;color:var(--chalk);margin:0;line-height:1.35}
+.formula .eq .op{color:var(--stone);padding:0 .2em;font-weight:400}
+.formula .eq .res{color:var(--chalk);border-bottom:2px solid var(--amber);padding-bottom:3px}
+.formula .eq .trm{color:var(--chalk)}
+.formula .leg{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);margin:16px 0 0}
+
+/* Ruota delle otto configurazioni: elemento firma */
+.wheel{margin:48px auto 0;max-width:430px}
+.wheel img{width:100%;height:auto;display:block}
+.wheel figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);text-align:center;margin-top:18px;line-height:1.9}
+.wheel .k{display:inline-flex;align-items:center;gap:7px;margin:0 10px}
+.wheel .k i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.wheel .k.a i{background:var(--amber)} .wheel .k.b i{background:var(--jade)}
+
+/* Nono luogo */
+.centro-fig{max-width:250px;margin:0 auto 30px}
+.centro-fig img{width:100%;height:auto;display:block}
+
+/* Tre livelli di libertà: progressione, non elenco */
+.levels{margin-top:46px;display:flex;flex-direction:column;gap:14px}
+.lv{position:relative;border:1px solid var(--line-l);border-left:4px solid var(--stone);border-radius:0 8px 8px 0;padding:26px 30px;background:var(--bone)}
+.lv:nth-child(2){border-left-color:var(--amber);margin-left:clamp(0px,3vw,34px)}
+.lv:nth-child(3){border-left-color:var(--jade);margin-left:clamp(0px,6vw,68px)}
+.lv-k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);margin:0 0 8px}
+.lv h3{font-family:var(--disp);font-weight:500;font-size:22px;color:var(--ink);margin:0 0 10px;letter-spacing:-.01em}
+.lv p{margin:0;font-size:16.5px;line-height:1.68;color:var(--ink-soft)}
+.lv-tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-top:14px;border:1px solid var(--line-l);color:var(--ink-soft)}
+
+@media(max-width:860px){
+  .axes{grid-template-columns:1fr}
+  .lv:nth-child(2),.lv:nth-child(3){margin-left:0}
+  .formula{padding:30px 12px}
+}
+
+/* ===== CAMMINATA — tre tempi affiancati, testo minuto ===== */
+.steps-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:44px;background:var(--line-l);border:1px solid var(--line-l)}
+.steps-3 .step-c{background:var(--bone);padding:30px 26px}
+.step-c .num{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--amber);display:block;margin-bottom:14px}
+.step-c h3{font-family:var(--disp);font-weight:500;font-size:21px;color:var(--ink);margin:0 0 10px;letter-spacing:-.01em}
+.step-c p{margin:0;font-size:16px;line-height:1.65;color:var(--ink-soft)}
+.on-void .steps-3{background:var(--line-d);border-color:var(--line-d)}
+.on-void .steps-3 .step-c{background:var(--void)}
+.on-void .step-c h3{color:var(--chalk)}
+.on-void .step-c p{color:#C7C1B2}
+.on-bone-2 .steps-3 .step-c{background:var(--bone-2)}
+.micro{font-family:var(--text);font-size:15.5px;line-height:1.7;color:var(--ink-soft)}
+.on-void .micro{color:#B4AE9F}
+@media(max-width:860px){ .steps-3{grid-template-columns:1fr} }
+
+/* etichetta "Leggi →" nelle schede articolo */
+.pc-more{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+
+/* .steps: leggibile su fondo chiaro (default) e su fondo scuro */
+.steps{border-top-color:var(--line-l)}
+.step{border-bottom-color:var(--line-l)}
+.step h3{color:var(--ink)}
+.step p{color:var(--ink-soft)}
+.on-void .steps{border-top-color:var(--line-d)}
+.on-void .step{border-bottom-color:var(--line-d)}
+.on-void .step h3{color:var(--chalk)}
+.on-void .step p{color:#C7C1B2}
+
+/* ===== TEST DELLE ABITUDINI ===== */
+.q-prog{font-size:12px;letter-spacing:.08em}
+.q-result{margin-top:40px;padding-top:34px;border-top:1px solid var(--line-l)}
+.res-count{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:0 0 6px}
+.res-count .n-top{font-family:var(--disp);font-size:clamp(56px,10vw,86px);font-weight:500;line-height:.9;color:var(--amber);letter-spacing:-.04em}
+.res-count .res-of{font-family:var(--disp);font-size:clamp(17px,2.4vw,21px);color:var(--ink);letter-spacing:-.01em;max-width:16em}
+.res-unknown{margin:8px 0 0}
+.res-band{margin-top:30px}
+.res-band h3{font-family:var(--disp);font-weight:500;font-size:clamp(21px,3vw,27px);color:var(--ink);letter-spacing:-.02em;margin:0 0 12px}
+.res-band p{margin:0;font-size:17px;line-height:1.72;color:var(--ink-soft)}
+.res-note{margin-top:30px;padding:20px 22px;border-left:3px solid var(--stone);background:var(--bone-2);font-size:15.5px;line-height:1.68;color:var(--ink-soft)}
+.koan-form{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.koan-form input[type=email]{flex:1;min-width:220px;padding:13px 15px;border:1px solid var(--line-l);border-radius:6px;background:#fff;font-family:var(--text);font-size:16px;color:var(--ink)}
+.koan-form input[type=email]::placeholder{color:var(--ink-soft)}
+.on-void .koan-form input[type=email]{background:transparent;border-color:var(--line-d);color:var(--chalk)}
+@media(max-width:600px){ .res-count{gap:8px} }
+.n-ns,.n-tot{font-variant-numeric:tabular-nums}
