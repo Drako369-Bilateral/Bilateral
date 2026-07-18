@@ -577,3 +577,22 @@ body.lefty .cookie-bar{flex-direction:row-reverse;}
 /* Colonne di lettura centrate anche negli articoli */
 .art-top{margin-inline:auto}
 .article{margin-inline:auto}
+
+/* Sezioni di invito: titolo, testo, modulo e pulsante centrati */
+.cta .narrow{text-align:center}
+.cta form{margin-left:auto;margin-right:auto;align-items:center}
+.cta form input,.cta form textarea{width:100%}
+.cta form .btn{align-self:center}
+.cta .tagline{text-align:center}
+
+/* Moduli allineati al centro anche fuori dalle sezioni di invito */
+.koan-form{justify-content:center}
+
+/* Riga con il solo pulsante: centrata */
+.cta-row{text-align:center;margin-top:24px}
+
+/* Intestazioni di sezione centrate: occhiello e titolo.
+   Il testo dei paragrafi resta a sinistra, per la leggibilità delle righe lunghe. */
+.narrow > .eyebrow,
+.narrow > .section-h2{text-align:center}
+.narrow > .section-h2{margin-left:auto;margin-right:auto;max-width:22ch}
