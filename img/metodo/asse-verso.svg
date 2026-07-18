@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img" aria-label="Due versi: energia dal basso verso l'alto, oppure dall'alto verso il basso">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="62" y1="22" x2="62" y2="98" stroke="#37342B" stroke-width="1.2"/>
+    <line x1="62" y1="94" x2="62" y2="32" stroke="#D98A2B" stroke-width="3.2"/>
+    <path d="M54 42 L62 30 L70 42" stroke="#D98A2B" stroke-width="3.2"/>
+    <line x1="120" y1="24" x2="120" y2="96" stroke="#37342B" stroke-width="1.2"/>
+    <line x1="178" y1="22" x2="178" y2="98" stroke="#37342B" stroke-width="1.2"/>
+    <line x1="178" y1="26" x2="178" y2="88" stroke="#5E9C86" stroke-width="3.2"/>
+    <path d="M170 78 L178 90 L186 78" stroke="#5E9C86" stroke-width="3.2"/>
+  </g>
+</svg>

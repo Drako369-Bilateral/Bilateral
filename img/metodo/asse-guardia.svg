@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img" aria-label="Due assetti: gamba sinistra avanti oppure gamba destra avanti">
+  <g fill="none" stroke-linecap="round">
+    <!-- assetto A -->
+    <ellipse cx="40" cy="42" rx="11" ry="17" fill="#D98A2B"/>
+    <ellipse cx="66" cy="76" rx="11" ry="17" fill="none" stroke="#8A8578" stroke-width="1.6"/>
+    <line x1="40" y1="59" x2="66" y2="59" stroke="#37342B" stroke-width="1.2"/>
+    <!-- divisore -->
+    <line x1="120" y1="24" x2="120" y2="96" stroke="#37342B" stroke-width="1.2"/>
+    <!-- assetto B -->
+    <ellipse cx="200" cy="42" rx="11" ry="17" fill="#5E9C86"/>
+    <ellipse cx="174" cy="76" rx="11" ry="17" fill="none" stroke="#8A8578" stroke-width="1.6"/>
+    <line x1="174" y1="59" x2="200" y2="59" stroke="#37342B" stroke-width="1.2"/>
+  </g>
+</svg>

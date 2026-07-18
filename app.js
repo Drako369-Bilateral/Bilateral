@@ -19,28 +19,7 @@
   }
   window.setLang=setLang; window.setLefty=setLefty;
 
-  function initQuiz(){
-    var quiz=document.getElementById('side-test'); if(!quiz) return;
-    var answers={}, total=quiz.querySelectorAll('.q').length;
-    quiz.addEventListener('click',function(e){
-      var b=e.target.closest('.opt'); if(!b) return;
-      var q=b.closest('.q');
-      q.querySelectorAll('.opt').forEach(function(o){o.setAttribute('aria-pressed','false');});
-      b.setAttribute('aria-pressed','true');
-      answers[q.getAttribute('data-q')]=b.getAttribute('data-val');
-      if(Object.keys(answers).length<total) return;
-      var ref=answers['1'], same=0, aware=0;
-      for(var k in answers){ if(k==='1') continue;
-        if(answers[k]==='aware') aware++;
-        else if(answers[k]==='auto') continue;
-        else if(answers[k]===ref) same++;
-      }
-      var key=(aware>=2)?'bilaterale':((same>=3)?'netta':'mista');
-      quiz.querySelectorAll('.q-res').forEach(function(r){ r.hidden=(r.getAttribute('data-res')!==key); });
-      var w=quiz.querySelector('.q-wait'); if(w) w.hidden=true;
-      var shown=quiz.querySelector('.q-res:not([hidden])'); if(shown) shown.scrollIntoView({behavior:'smooth',block:'center'});
-    });
-  }
+  
   function wireAjax(fid,did){
     var f=document.getElementById(fid); if(!f) return;
     f.addEventListener('submit',function(e){
@@ -54,8 +33,7 @@
     var lon=false; try{lon=localStorage.getItem(FKEY)==='1';}catch(e){} setLefty(lon);
     var lb=document.getElementById('lefty-btn'); if(lb) lb.addEventListener('click',function(){setLefty(!document.body.classList.contains('lefty'));});
     var tg=document.querySelector('.nav-toggle'), m=document.getElementById('m');
-    if(tg&&m) tg.addEventListener('click',function(){m.style.display=(m.style.display==='block')?'none':'block';});
-    initQuiz(); wireAjax('koan-form','koan-done'); wireAjax('book-form','book-done');
+    if(tg&&m) tg.addEventListener('click',function(){m.style.display=(m.style.display==='block')?'none':'block';}); wireAjax('book-form','book-done'); wireAjax('walk-form','walk-done'); wireAjax('home-form','home-done');
   });
 })();
 
@@ -100,30 +78,75 @@
     document.querySelectorAll('form[action*="formspree"]').forEach(function(f){
       f.addEventListener('submit', function(){
         var id=f.id||'';
-        if(id==='koan-form') ev('koan_richiesti');
-        else if(id==='book-form') ev('libro_richiesto');
+        if(id==='book-form') ev('principi_richiesti');
         else ev('contatto_inviato',{pagina:path});
       });
     });
-    var quiz=document.getElementById('side-test');
-    if(quiz){ var started=false;
-      quiz.addEventListener('click', function(e){
-        if(!e.target.closest('.opt')) return;
-        if(!started){ started=true; ev('test_iniziato'); }
-        setTimeout(function(){
-          var r=quiz.querySelector('.q-res:not([hidden])');
-          if(r && !quiz.getAttribute('data-done')){ quiz.setAttribute('data-done','1'); ev('test_completato',{profilo:r.getAttribute('data-res')}); }
-        },60);
-      });
-    }
+
     var lb=document.getElementById('lefty-btn'); if(lb) lb.addEventListener('click', function(){ ev('modalita_mancino',{stato: document.body.classList.contains('lefty')?'on':'off'}); });
     document.querySelectorAll('.ex-head').forEach(function(b){
       b.addEventListener('click', function(){ var c=b.closest('.ex-card'); if(c && c.classList.contains('open')){ var ti=b.querySelector('.ex-title'); ev('esercizio_aperto',{esercizio: ti?ti.textContent.trim():''}); } });
     });
-    document.querySelectorAll('.filter-btn').forEach(function(b){ b.addEventListener('click', function(){ ev('filtro_blog',{campo:b.getAttribute('data-cat')}); }); });
+    document.querySelectorAll('.filter-btn').forEach(function(b){ b.addEventListener('click', function(){ ev('filtro_articoli',{campo:b.getAttribute('data-cat')}); }); });
     document.querySelectorAll('a[download], a[href$=".pdf"]').forEach(function(a){ a.addEventListener('click', function(){ ev('documento_scaricato',{documento:(a.getAttribute('href')||'').split('/').pop()}); }); });
     document.querySelectorAll('a[data-it^="Vieni marted"], a[href*="/camminata/"], a[href*="/en/walk/"]').forEach(function(a){ a.addEventListener('click', function(){ ev('cta_camminata',{pagina:path}); }); });
     document.querySelectorAll('a[href^="http"]').forEach(function(a){ if(a.hostname && a.hostname!==location.hostname){ a.addEventListener('click', function(){ ev('link_esterno',{url:a.href}); }); } });
     document.querySelectorAll('[data-ev]').forEach(function(el){ el.addEventListener('click', function(){ ev(el.getAttribute('data-ev'),{pagina:path}); }); });
   });
+})();
+
+/* Lingua statica coerente con l'URL: le pagine sotto /en/ mostrano sempre i testi data-en.
+   Rete di sicurezza: se un testo statico resta in italiano, viene corretto al caricamento. */
+(function(){
+  function apply(){
+    var lang = location.pathname.indexOf('/en/') === 0 ? 'en' : 'it';
+    document.querySelectorAll('[data-' + lang + ']').forEach(function(el){
+      var v = el.getAttribute('data-' + lang);
+      if (v !== null && el.children.length === 0 && el.textContent.trim() !== v.trim()) el.textContent = v;
+    });
+    document.querySelectorAll('[data-' + lang + '-ph]').forEach(function(el){
+      var v = el.getAttribute('data-' + lang + '-ph');
+      if (v !== null) el.setAttribute('placeholder', v);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply);
+  else apply();
+})();
+
+/* Test delle abitudini: conta quanti gesti partono dallo stesso lato.
+   Non assegna un'etichetta: mostra un numero. */
+(function(){
+  function ev(n,p){ try{ if(window.gtag) gtag('event', n, p||{}); }catch(e){} }
+  function init(){
+    var t=document.getElementById('habit-test'); if(!t) return;
+    var answers={}, total=t.querySelectorAll('.q').length, started=false, done=false;
+    t.addEventListener('click', function(e){
+      var b=e.target.closest('.opt'); if(!b) return;
+      var q=b.closest('.q');
+      q.querySelectorAll('.opt').forEach(function(o){ o.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+      answers[q.getAttribute('data-q')]=b.getAttribute('data-val');
+      if(!started){ started=true; ev('test_iniziato'); }
+      var n=Object.keys(answers).length;
+      var prog=t.querySelector('.q-prog'); if(prog) prog.textContent=n+'/'+total;
+      if(n<total) return;
+
+      var sx=0, dx=0, ns=0;
+      for(var k in answers){
+        if(answers[k]==='sx') sx++; else if(answers[k]==='dx') dx++; else ns++;
+      }
+      var top=Math.max(sx,dx), lato=(sx>dx)?'sx':((dx>sx)?'dx':'pari');
+      var band=(top>=7)?'alto':((top>=5)?'medio':'basso');
+
+      t.querySelectorAll('.n-top').forEach(function(el){ el.textContent=top; });
+      t.querySelectorAll('.n-tot').forEach(function(el){ el.textContent=total; });
+      var uk=t.querySelector('.res-unknown');
+      if(uk){ uk.hidden=(ns===0); uk.querySelectorAll('.n-ns').forEach(function(el){ el.textContent=ns; }); }
+      t.querySelectorAll('.res-band').forEach(function(r){ r.hidden=(r.getAttribute('data-band')!==band); });
+      var w=t.querySelector('.q-wait'); if(w) w.hidden=true;
+      var box=t.querySelector('.q-result'); if(box){ box.hidden=false; box.scrollIntoView({behavior:'smooth',block:'center'}); }
+      if(!done){ done=true; ev('test_completato',{stesso_lato:top, non_notati:ns, lato:lato}); }
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

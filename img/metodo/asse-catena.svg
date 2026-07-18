@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img" aria-label="Due catene: quella anteriore che passa davanti, quella posteriore che passa dietro">
+  <g fill="none" stroke-linecap="round">
+    <!-- corpo A: catena anteriore -->
+    <line x1="34" y1="20" x2="34" y2="100" stroke="#37342B" stroke-width="1.2"/>
+    <path d="M34 30 C 58 44, 62 66, 82 96" stroke="#D98A2B" stroke-width="3.2"/>
+    <circle cx="34" cy="30" r="4.5" fill="#D98A2B"/><circle cx="82" cy="96" r="4.5" fill="#D98A2B"/>
+    <line x1="120" y1="24" x2="120" y2="96" stroke="#37342B" stroke-width="1.2"/>
+    <!-- corpo B: catena posteriore -->
+    <line x1="206" y1="20" x2="206" y2="100" stroke="#37342B" stroke-width="1.2"/>
+    <path d="M206 30 C 182 44, 178 66, 158 96" stroke="#5E9C86" stroke-width="3.2" stroke-dasharray="1 0"/>
+    <circle cx="206" cy="30" r="4.5" fill="#5E9C86"/><circle cx="158" cy="96" r="4.5" fill="#5E9C86"/>
+  </g>
+</svg>

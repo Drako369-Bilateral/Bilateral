@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="Otto posizioni attorno a un centro vuoto: il nono luogo">
+  <circle cx="110" cy="110" r="66" fill="none" stroke="#37342B" stroke-width="1.2"/>
+    <circle cx="110.0" cy="44.0" r="5" fill="#8A8578" opacity=".45"/>
+  <line x1="110.0" y1="88.0" x2="110.0" y2="54.0" stroke="#37342B" stroke-width="1.2"/>
+  <circle cx="156.7" cy="63.3" r="5" fill="#8A8578" opacity=".45"/>
+  <line x1="125.6" y1="94.4" x2="149.6" y2="70.4" stroke="#37342B" stroke-width="1.2"/>
+  <circle cx="176.0" cy="110.0" r="5" fill="#8A8578" opacity=".45"/>
+  <line x1="132.0" y1="110.0" x2="166.0" y2="110.0" stroke="#37342B" stroke-width="1.2"/>
+  <circle cx="156.7" cy="156.7" r="5" fill="#8A8578" opacity=".45"/>
+  <line x1="125.6" y1="125.6" x2="149.6" y2="149.6" stroke="#37342B" stroke-width="1.2"/>
+  <circle cx="110.0" cy="176.0" r="5" fill="#8A8578" opacity=".45"/>
+  <line x1="110.0" y1="132.0" x2="110.0" y2="166.0" stroke="#37342B" stroke-width="1.2"/>
+  <circle cx="63.3" cy="156.7" r="5" fill="#8A8578" opacity=".45"/>
+  <line x1="94.4" y1="125.6" x2="70.4" y2="149.6" stroke="#37342B" stroke-width="1.2"/>
+  <circle cx="44.0" cy="110.0" r="5" fill="#8A8578" opacity=".45"/>
+  <line x1="88.0" y1="110.0" x2="54.0" y2="110.0" stroke="#37342B" stroke-width="1.2"/>
+  <circle cx="63.3" cy="63.3" r="5" fill="#8A8578" opacity=".45"/>
+  <line x1="94.4" y1="94.4" x2="70.4" y2="70.4" stroke="#37342B" stroke-width="1.2"/>
+  <circle cx="110" cy="110" r="15" fill="none" stroke="#E8E3D6" stroke-width="2.2"/>
+  <circle cx="110" cy="110" r="3" fill="#E8E3D6"/>
+</svg>
