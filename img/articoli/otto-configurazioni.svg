@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Otto trigrammi disposti attorno a un centro vuoto: le otto configurazioni del corpo e il nono luogo">
+  <title>Le otto configurazioni del corpo e gli otto trigrammi</title>
+  <desc>Otto figure di tre linee disposte in cerchio attorno a un centro vuoto. Il colore distingue le quattro configurazioni di un lato dalle quattro dell'altro, secondo la parita delle tre scelte.</desc>
+  <g>
+        <rect width="1200" height="630" fill="#16150F"/>
+    <circle cx="600" cy="315" r="205" fill="none" stroke="#3A362C" stroke-width="1.5"/>
+    <line x1="600.0" y1="273.0" x2="600.0" y2="156.0" stroke="#5E9C86" stroke-width="1.6" opacity=".55"/>
+    <line x1="629.7" y1="285.3" x2="712.4" y2="202.6" stroke="#D98A2B" stroke-width="1.6" opacity=".55"/>
+    <line x1="642.0" y1="315.0" x2="759.0" y2="315.0" stroke="#D98A2B" stroke-width="1.6" opacity=".55"/>
+    <line x1="629.7" y1="344.7" x2="712.4" y2="427.4" stroke="#5E9C86" stroke-width="1.6" opacity=".55"/>
+    <line x1="600.0" y1="357.0" x2="600.0" y2="474.0" stroke="#D98A2B" stroke-width="1.6" opacity=".55"/>
+    <line x1="570.3" y1="344.7" x2="487.6" y2="427.4" stroke="#5E9C86" stroke-width="1.6" opacity=".55"/>
+    <line x1="558.0" y1="315.0" x2="441.0" y2="315.0" stroke="#5E9C86" stroke-width="1.6" opacity=".55"/>
+    <line x1="570.3" y1="285.3" x2="487.6" y2="202.6" stroke="#D98A2B" stroke-width="1.6" opacity=".55"/>
+    <rect x="567.0" y="122.5" width="25.0" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="608.0" y="122.5" width="25.0" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="567.0" y="106.5" width="25.0" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="608.0" y="106.5" width="25.0" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="567.0" y="90.5" width="25.0" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="608.0" y="90.5" width="25.0" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="712.0" y="182.5" width="66" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="712.0" y="166.5" width="25.0" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="753.0" y="166.5" width="25.0" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="712.0" y="150.5" width="25.0" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="753.0" y="150.5" width="25.0" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="772.0" y="327.5" width="25.0" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="813.0" y="327.5" width="25.0" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="772.0" y="311.5" width="66" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="772.0" y="295.5" width="25.0" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="813.0" y="295.5" width="25.0" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="712.0" y="472.5" width="66" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="712.0" y="456.5" width="66" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="712.0" y="440.5" width="25.0" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="753.0" y="440.5" width="25.0" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="567.0" y="532.5" width="25.0" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="608.0" y="532.5" width="25.0" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="567.0" y="516.5" width="25.0" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="608.0" y="516.5" width="25.0" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="567.0" y="500.5" width="66" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="422.0" y="472.5" width="66" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="422.0" y="456.5" width="25.0" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="463.0" y="456.5" width="25.0" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="422.0" y="440.5" width="66" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="362.0" y="327.5" width="25.0" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="403.0" y="327.5" width="25.0" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="362.0" y="311.5" width="66" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="362.0" y="295.5" width="66" height="7" rx="3.5" fill="#5E9C86"/>
+    <rect x="422.0" y="182.5" width="66" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="422.0" y="166.5" width="66" height="7" rx="3.5" fill="#D98A2B"/>
+    <rect x="422.0" y="150.5" width="66" height="7" rx="3.5" fill="#D98A2B"/>
+    <circle cx="600" cy="315" r="26" fill="#16150F" stroke="#ECE7DB" stroke-width="2.4"/>
+    <circle cx="600" cy="315" r="5" fill="#ECE7DB"/>
+  </g>
+</svg>
