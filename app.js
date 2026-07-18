@@ -122,7 +122,7 @@
     });
     document.querySelectorAll('.filter-btn').forEach(function(b){ b.addEventListener('click', function(){ ev('filtro_blog',{campo:b.getAttribute('data-cat')}); }); });
     document.querySelectorAll('a[download], a[href$=".pdf"]').forEach(function(a){ a.addEventListener('click', function(){ ev('documento_scaricato',{documento:(a.getAttribute('href')||'').split('/').pop()}); }); });
-    document.querySelectorAll('a[data-it="Contattami"]').forEach(function(a){ a.addEventListener('click', function(){ ev('cta_contattami',{pagina:path}); }); });
+    document.querySelectorAll('a[data-it^="Vieni marted"], a[href*="/camminata/"], a[href*="/en/walk/"]').forEach(function(a){ a.addEventListener('click', function(){ ev('cta_camminata',{pagina:path}); }); });
     document.querySelectorAll('a[href^="http"]').forEach(function(a){ if(a.hostname && a.hostname!==location.hostname){ a.addEventListener('click', function(){ ev('link_esterno',{url:a.href}); }); } });
     document.querySelectorAll('[data-ev]').forEach(function(el){ el.addEventListener('click', function(){ ev(el.getAttribute('data-ev'),{pagina:path}); }); });
   });
