@@ -596,3 +596,9 @@ body.lefty .cookie-bar{flex-direction:row-reverse;}
 .narrow > .eyebrow,
 .narrow > .section-h2{text-align:center}
 .narrow > .section-h2{margin-left:auto;margin-right:auto;max-width:22ch}
+
+/* Frase manifesto */
+.statement-sec{padding-top:64px;padding-bottom:64px}
+.statement{font-family:var(--disp);font-weight:500;font-size:clamp(30px,5.6vw,58px);line-height:1.08;letter-spacing:-.035em;color:var(--chalk);text-align:center;margin:0}
+.statement br{display:block;content:''}
+.hero .hub-wrap{margin-bottom:26px}
