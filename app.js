@@ -191,3 +191,23 @@
   agg();
   window.addEventListener('scroll', agg, {passive:true});
 })();
+
+/* La barra è fissa: misuro la sua altezza reale e la compenso, anche al ridimensionamento */
+(function(){
+  function spazio(){
+    var h=document.querySelector('header.site');
+    if(!h) return;
+    var m=document.getElementById('m');
+    var aperto = m && m.style.display==='block';
+    if(aperto) return;                      // con la tendina aperta la misura sarebbe falsata
+    var alt=h.offsetHeight;
+    if(alt>0){
+      document.body.style.paddingTop=alt+'px';
+      document.documentElement.style.setProperty('--head-h', alt+'px');
+    }
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', spazio);
+  else spazio();
+  window.addEventListener('load', spazio);
+  window.addEventListener('resize', spazio, {passive:true});
+})();
