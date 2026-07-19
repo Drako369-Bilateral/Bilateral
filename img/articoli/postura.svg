@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Una bilancia sbilanciata: un lato porta sempre il carico maggiore">
+  <title>Un lato porta sempre il carico</title>
+    <rect width="1200" height="630" fill="#16150F"/>
+  <line x1="614" y1="340" x2="1026" y2="260" stroke="#E8E3D6" stroke-width="5" stroke-linecap="round"/>
+  <path d="M794 392 L820 308 L846 392 Z" fill="none" stroke="#8A8578" stroke-width="3"/>
+  <circle cx="820" cy="300" r="7" fill="#E8E3D6"/>
+  <line x1="1026" y1="260" x2="1026" y2="312" stroke="#37342B" stroke-width="2"/>
+  <circle cx="1026" cy="327" r="44" fill="#D98A2B"/>
+  <line x1="614" y1="340" x2="614" y2="392" stroke="#37342B" stroke-width="2"/>
+  <circle cx="614" cy="401" r="26" fill="#5E9C86"/>
+</svg>
