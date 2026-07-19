@@ -38,7 +38,7 @@ em{font-style:italic;}
 .btn.ghost-void:hover{border-color:var(--chalk);}
 
 /* nav */
-header.site{position:sticky; top:0; z-index:60; background:rgba(22,21,15,.90); backdrop-filter:blur(8px); border-bottom:1px solid var(--line-d);}
+header.site{position:-webkit-sticky; position:sticky; top:0; z-index:100; background:rgba(22,21,15,.92); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line-d); transition:box-shadow .25s ease, background .25s ease;}
 .nav{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:15px 0;}
 .mark{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--chalk); white-space:nowrap;}
 .mark .node{width:15px; height:15px; flex:none;}
@@ -651,3 +651,13 @@ body.lefty .cookie-bar{flex-direction:row-reverse;}
 /* Pulsante compatto per gli elenchi */
 .btn.mini{font-size:13px;padding:10px 18px;letter-spacing:.02em}
 .voce .btn{margin-top:16px}
+
+
+/* La barra resta in alto anche durante lo scorrimento, e si stacca con un'ombra */
+header.site.scrolled{box-shadow:0 1px 24px rgba(0,0,0,.34); background:rgba(22,21,15,.96)}
+/* niente antenati con overflow che romperebbero lo sticky */
+body{overflow-x:clip}
+@media (max-width:860px){
+  header.site{position:-webkit-sticky; position:sticky; top:0}
+  .nav{padding:11px 0}
+}

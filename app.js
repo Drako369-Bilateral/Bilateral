@@ -182,3 +182,12 @@
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', aggiorna); else aggiorna();
 })();
+
+/* Ombra sulla barra quando la pagina è scorsa */
+(function(){
+  var h=document.querySelector('header.site');
+  if(!h) return;
+  function agg(){ h.classList.toggle('scrolled', window.scrollY>8); }
+  agg();
+  window.addEventListener('scroll', agg, {passive:true});
+})();
