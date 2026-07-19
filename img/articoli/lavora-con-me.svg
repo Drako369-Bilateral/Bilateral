@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" role="img" aria-label="Sei percorsi che entrano da sinistra a quote diverse e convergono in un unico punto">
+  <title>Molti modi, un principio</title>
+  <rect width="1200" height="540" fill="#16150F"/>
+  <path d="M120 90 C420 90, 600 225, 880 270" fill="none" stroke="#D98A2B" stroke-width="3" opacity="0.35"/>
+  <circle cx="120" cy="90" r="7" fill="#D98A2B" opacity="0.50"/>
+  <path d="M120 160 C420 160, 600 242, 880 270" fill="none" stroke="#5E9C86" stroke-width="3" opacity="0.46"/>
+  <circle cx="120" cy="160" r="7" fill="#5E9C86" opacity="0.59"/>
+  <path d="M120 230 C420 230, 600 260, 880 270" fill="none" stroke="#D98A2B" stroke-width="3" opacity="0.57"/>
+  <circle cx="120" cy="230" r="7" fill="#D98A2B" opacity="0.68"/>
+  <path d="M120 300 C420 300, 600 278, 880 270" fill="none" stroke="#5E9C86" stroke-width="3" opacity="0.68"/>
+  <circle cx="120" cy="300" r="7" fill="#5E9C86" opacity="0.77"/>
+  <path d="M120 370 C420 370, 600 295, 880 270" fill="none" stroke="#D98A2B" stroke-width="3" opacity="0.79"/>
+  <circle cx="120" cy="370" r="7" fill="#D98A2B" opacity="0.86"/>
+  <path d="M120 440 C420 440, 600 312, 880 270" fill="none" stroke="#5E9C86" stroke-width="3" opacity="0.90"/>
+  <circle cx="120" cy="440" r="7" fill="#5E9C86" opacity="0.95"/>
+  <circle cx="920" cy="270" r="46" fill="none" stroke="#E8E3D6" stroke-width="3"/>
+  <circle cx="920" cy="270" r="9" fill="#E8E3D6"/>
+</svg>
