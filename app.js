@@ -150,3 +150,35 @@
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
+
+/* Evento ricorrente: tiene aggiornata la data del prossimo martedì nei dati strutturati,
+   così non invecchia su un sito statico. */
+(function(){
+  function prossimoMartedi(){
+    var now=new Date(), d=new Date(now), diff=(2-d.getDay()+7)%7;
+    if(diff===0 && (now.getHours()>19 || (now.getHours()===19 && now.getMinutes()>45))) diff=7;
+    d.setDate(d.getDate()+diff); return d;
+  }
+  function iso(d,h,m){
+    var mese=d.getMonth()+1, off=(mese>=4 && mese<=10) ? '+02:00' : '+01:00';
+    function p(n){ return (n<10?'0':'')+n; }
+    return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())+'T'+p(h)+':'+p(m)+':00'+off;
+  }
+  function aggiorna(){
+    var d=prossimoMartedi(), inizio=iso(d,19,0), fine=iso(d,19,45);
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
+      try{
+        var data=JSON.parse(s.textContent), tocca=false;
+        var nodi = data['@graph'] || [data];
+        nodi.forEach(function(n){
+          if(n && n['@type']==='Event'){
+            n.startDate=inizio; n.endDate=fine; tocca=true;
+            if(n.eventSchedule) n.eventSchedule.startDate=inizio.slice(0,10);
+          }
+        });
+        if(tocca) s.textContent=JSON.stringify(data);
+      }catch(e){}
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', aggiorna); else aggiorna();
+})();
