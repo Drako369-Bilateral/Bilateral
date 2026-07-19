@@ -33,7 +33,7 @@
     var lon=false; try{lon=localStorage.getItem(FKEY)==='1';}catch(e){} setLefty(lon);
     var lb=document.getElementById('lefty-btn'); if(lb) lb.addEventListener('click',function(){setLefty(!document.body.classList.contains('lefty'));});
     var tg=document.querySelector('.nav-toggle'), m=document.getElementById('m');
-    if(tg&&m) tg.addEventListener('click',function(){m.style.display=(m.style.display==='block')?'none':'block';}); wireAjax('book-form','book-done'); wireAjax('walk-form','walk-done'); wireAjax('home-form','home-done');
+    if(tg&&m) tg.addEventListener('click',function(){m.style.display=(m.style.display==='block')?'none':'block';}); wireAjax('book-form','book-done'); wireAjax('walk-form','walk-done'); wireAjax('home-form','home-done'); wireAjax('sessione-form','sessione-done'); wireAjax('b2b-form','b2b-done'); wireAjax('centri-form','centri-done'); wireAjax('scuole-form','scuole-done'); wireAjax('riab-form','riab-done');
   });
 })();
 

@@ -602,3 +602,52 @@ body.lefty .cookie-bar{flex-direction:row-reverse;}
 .statement{font-family:var(--disp);font-weight:500;font-size:clamp(30px,5.6vw,58px);line-height:1.08;letter-spacing:-.035em;color:var(--chalk);text-align:center;margin:0}
 .statement br{display:block;content:''}
 .hero .hub-wrap{margin-bottom:26px}
+
+/* ===== SESSIONE — trattamento editoriale ===== */
+
+/* Linea del tempo dei novanta minuti */
+.timeline{margin:48px 0 0;position:relative;padding-left:0}
+.tl{display:grid;grid-template-columns:104px 1fr;gap:0;align-items:start;position:relative;padding:34px 0}
+.tl + .tl{border-top:1px solid var(--line-l)}
+.on-void .tl + .tl{border-top-color:var(--line-d)}
+.tl-time{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);padding-top:6px}
+.tl-body h3{font-family:var(--disp);font-weight:500;font-size:clamp(20px,2.6vw,26px);letter-spacing:-.02em;color:var(--ink);margin:0 0 10px}
+.tl-body p{margin:0;font-size:16.5px;line-height:1.7;color:var(--ink-soft)}
+.on-void .tl-body h3{color:var(--chalk)} .on-void .tl-body p{color:#C7C1B2}
+@media(max-width:640px){ .tl{grid-template-columns:1fr;gap:8px} .tl-time{padding-top:0} }
+
+/* Listino: numeri grandi, filetti sottili */
+.listino{margin-top:46px;border-top:1px solid var(--line-l)}
+.on-void .listino{border-top-color:var(--line-d)}
+.voce{display:grid;grid-template-columns:1fr auto;gap:26px;align-items:baseline;padding:30px 0;border-bottom:1px solid var(--line-l)}
+.on-void .voce{border-bottom-color:var(--line-d)}
+.voce-k{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--stone);display:block;margin-bottom:10px}
+.voce-t{font-family:var(--disp);font-weight:500;font-size:clamp(19px,2.4vw,23px);letter-spacing:-.02em;color:var(--ink);margin:0 0 8px}
+.on-void .voce-t{color:var(--chalk)}
+.voce-d{margin:0;font-size:15.5px;line-height:1.65;color:var(--ink-soft);max-width:42ch}
+.on-void .voce-d{color:#B4AE9F}
+.voce-p{font-family:var(--disp);font-weight:500;font-size:clamp(34px,5vw,52px);letter-spacing:-.04em;color:var(--amber);line-height:1;white-space:nowrap}
+.voce-p small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);margin-top:8px;font-weight:400}
+.voce.nota{grid-template-columns:1fr;border-bottom:none}
+.voce.nota .voce-d{max-width:56ch}
+@media(max-width:640px){ .voce{grid-template-columns:1fr;gap:14px} .voce-p{font-size:38px} }
+
+/* Filetto d'apertura sotto l'occhiello */
+.rule-amber{width:44px;height:2px;background:var(--amber);margin:0 auto 26px}
+
+/* Segno di stacco fra sezioni */
+.mark-sep{display:flex;justify-content:center;padding:8px 0 0}
+.mark-sep svg{width:34px;height:34px;opacity:.5}
+
+/* Gruppi dentro il listino */
+.gruppo-titolo{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin:0 0 4px;padding-top:6px}
+.gruppo-titolo.second{margin-top:38px;padding-top:32px;border-top:2px solid var(--line-l)}
+.on-void .gruppo-titolo.second{border-top-color:var(--line-d)}
+/* la prima coppia di voci si stacca: bordo sinistro sottile */
+.listino .voce.primaria{border-left:2px solid var(--amber);padding-left:22px}
+.listino .voce.secondaria{padding-left:22px;border-left:2px solid var(--line-l)}
+.on-void .listino .voce.secondaria{border-left-color:var(--line-d)}
+
+/* Pulsante compatto per gli elenchi */
+.btn.mini{font-size:13px;padding:10px 18px;letter-spacing:.02em}
+.voce .btn{margin-top:16px}
