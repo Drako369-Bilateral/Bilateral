@@ -667,3 +667,102 @@ body{padding-top:64px}
 
 /* Il menu a tendina si apre sopra il contenuto, senza spostarlo */
 .mobile{max-height:calc(100vh - 54px); overflow-y:auto; -webkit-overflow-scrolling:touch}
+
+/* ===== TEST — trattamento editoriale ===== */
+
+/* la domanda diventa una riga a due colonne: numero grande a sinistra */
+#habit-test .q{display:grid;grid-template-columns:64px 1fr;gap:0 22px;align-items:start;
+  padding:30px 0;border-top:1px solid var(--line-l)}
+#habit-test .q:first-of-type{border-top:1px solid var(--line-l)}
+#habit-test .q-text{display:block;margin:0 0 16px;font-family:var(--disp);font-weight:500;
+  font-size:clamp(18px,2.5vw,22px);line-height:1.32;letter-spacing:-.015em;color:var(--ink);grid-column:2}
+#habit-test .q-num{grid-column:1;grid-row:1 / span 2;font-family:var(--disp);font-weight:500;
+  font-size:40px;line-height:1;letter-spacing:-.04em;color:var(--line-l);padding-top:2px;display:block}
+#habit-test .q.risposta .q-num{color:var(--amber)}
+#habit-test .opts{grid-column:2;display:flex;gap:8px;flex-wrap:wrap}
+
+/* pulsanti sottili, non riempimenti pieni */
+#habit-test .opt{flex:0 1 auto;min-width:118px;background:transparent;border:1px solid var(--line-l);
+  color:var(--ink-soft);padding:11px 18px;border-radius:2px;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:all .16s ease}
+#habit-test .opt:hover{border-color:var(--stone);color:var(--ink)}
+#habit-test .opt[aria-pressed="true"]{background:transparent;border-color:var(--amber);
+  color:var(--amber);box-shadow:inset 0 -2px 0 var(--amber)}
+
+/* avanzamento come filetto che si riempie */
+.q-prog-wrap{display:flex;align-items:center;gap:14px;margin:0 0 8px}
+.q-prog-bar{flex:1;height:2px;background:var(--line-l);position:relative;overflow:hidden}
+.q-prog-bar i{position:absolute;inset:0 auto 0 0;width:0;background:var(--amber);transition:width .3s ease;display:block}
+
+/* risultato: il numero come piastra */
+.q-result{margin-top:52px;padding-top:0;border-top:none}
+.res-count{display:block;text-align:center;margin:0 0 4px;padding:40px 0 34px;
+  border-top:1px solid var(--line-l);border-bottom:1px solid var(--line-l)}
+.res-count .n-top{display:block;font-size:clamp(74px,15vw,124px);line-height:.86;margin-bottom:14px}
+.res-count .res-of{display:block;max-width:22ch;margin:0 auto;font-size:clamp(16px,2.2vw,19px);color:var(--ink-soft)}
+.res-unknown{text-align:center;margin-top:16px}
+.res-band{margin-top:38px;text-align:center}
+.res-band h3{margin-bottom:14px}
+.res-band p{max-width:52ch;margin:0 auto;text-align:left}
+
+/* ===== TEST A SCORRIMENTO: una domanda alla volta, dentro un riquadro ===== */
+#habit-test.passo .q{display:none}
+#habit-test.passo .q.attiva{display:grid;animation:qin .32s cubic-bezier(.2,.7,.2,1) both}
+@keyframes qin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+#habit-test.passo .riquadro{border:1px solid var(--line-l);border-radius:4px;background:var(--bone);
+  padding:34px 34px 30px;margin-top:26px;min-height:238px;display:flex;flex-direction:column;justify-content:center}
+#habit-test.passo .q{border-top:none;padding:0}
+#habit-test.passo .q-num{font-size:34px}
+#habit-test.passo .q-text{font-size:clamp(19px,2.7vw,24px)}
+
+/* barra di avanzamento in cima al riquadro */
+#habit-test.passo .q-prog-wrap{margin:0 0 4px}
+.passo-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;min-height:22px}
+.passo-indietro{background:none;border:none;cursor:pointer;padding:0;
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone)}
+.passo-indietro:hover{color:var(--ink)}
+.passo-indietro[hidden]{visibility:hidden;display:block}
+.passo-conta{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone)}
+@media(max-width:600px){ #habit-test.passo .riquadro{padding:26px 22px 24px;min-height:216px} }
+
+/* Motivo delle tre coppie sotto il primo paragrafo della home */
+.coppie{margin:40px auto 6px;max-width:560px}
+.coppie img{width:100%;height:auto;display:block}
+.coppie figcaption{display:flex;justify-content:space-around;margin-top:6px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone)}
+
+/* ===== RESPIRO: pulsanti staccati dal testo, e la riga in corsivo dell'apertura ===== */
+
+/* la riga di risposta nell'apertura prende aria dalla riga sopra */
+.hero h1 .serif-accent{display:block; margin-top:.34em; line-height:1.16}
+
+/* pulsanti: più distanza dal paragrafo che li precede */
+.cta-row{margin-top:40px}
+.hero-cta{margin-top:44px}
+.narrow > p + .cta-row{margin-top:44px}
+.step-c .cta-row{margin-top:26px}          /* dentro i riquadri resta compatto */
+.voce .btn{margin-top:20px}
+
+/* anche la riga sotto i pulsanti non si incolla */
+.cta-row + .micro{margin-top:20px}
+
+/* ===== CHI SONO — le sette porte come elenco editoriale ===== */
+.porte-lista{margin-top:44px;border-top:1px solid var(--line-l)}
+.porta-riga{display:grid;grid-template-columns:88px 1fr;gap:0 26px;align-items:start;
+  padding:28px 0;border-bottom:1px solid var(--line-l)}
+.porta-n{font-family:var(--disp);font-weight:500;font-size:clamp(30px,4.4vw,44px);line-height:.95;
+  letter-spacing:-.04em;color:var(--line-l);padding-top:2px}
+.porta-riga:hover .porta-n{color:var(--amber);transition:color .2s ease}
+.porta-testo h3{font-family:var(--disp);font-weight:500;font-size:clamp(19px,2.5vw,23px);
+  letter-spacing:-.02em;color:var(--ink);margin:0 0 8px}
+.porta-testo p{margin:0;font-size:16.5px;line-height:1.68;color:var(--ink-soft);max-width:56ch}
+@media(max-width:640px){
+  .porta-riga{grid-template-columns:56px 1fr;gap:0 18px;padding:22px 0}
+  .porta-n{font-size:28px}
+}
+
+/* foto d'apertura: cornice più sobria, senza ombra pesante */
+.about-photo{border-radius:4px;border:1px solid #3a362b;box-shadow:none;position:relative}
+.about-photo::after{content:"";position:absolute;inset:0;border:1px solid rgba(236,231,219,.10);border-radius:4px;pointer-events:none}
+.about-hero{gap:56px;align-items:center}

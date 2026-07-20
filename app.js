@@ -211,3 +211,63 @@
   window.addEventListener('load', spazio);
   window.addEventListener('resize', spazio, {passive:true});
 })();
+
+/* Test: filetto di avanzamento e numero acceso sulle domande risposte */
+(function(){
+  function init(){
+    var t=document.getElementById('habit-test'); if(!t) return;
+    var tot=t.querySelectorAll('.q').length;
+    t.addEventListener('click', function(e){
+      var b=e.target.closest('.opt'); if(!b) return;
+      var q=b.closest('.q'); if(q) q.classList.add('risposta');
+      var fatte=t.querySelectorAll('.q.risposta').length;
+      var bar=t.querySelector('.q-prog-bar i');
+      if(bar) bar.style.width=Math.round(fatte/tot*100)+'%';
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+
+/* Test a scorrimento: una domanda alla volta. Se il JS non parte, restano tutte visibili. */
+(function(){
+  function init(){
+    var t=document.getElementById('habit-test'); if(!t) return;
+    var domande=[].slice.call(t.querySelectorAll('.q'));
+    if(domande.length<2) return;
+    var tot=domande.length, i=0;
+    var indietro=t.querySelector('.passo-indietro');
+    var conta=t.querySelector('.passo-conta');
+    var bar=t.querySelector('.q-prog-bar i');
+    var prog=t.querySelector('.q-prog');
+
+    t.classList.add('passo');
+
+    function mostra(n){
+      i=Math.max(0, Math.min(n, tot-1));
+      domande.forEach(function(q,k){ q.classList.toggle('attiva', k===i); });
+      if(conta) conta.textContent=(i+1)+' / '+tot;
+      if(indietro) indietro.hidden = (i===0);
+      var risposte=t.querySelectorAll('.q.risposta').length;
+      if(bar) bar.style.width=Math.round(risposte/tot*100)+'%';
+      if(prog) prog.textContent=risposte+'/'+tot;
+    }
+
+    t.addEventListener('click', function(e){
+      if(e.target.closest('.passo-indietro')){ mostra(i-1); return; }
+      var b=e.target.closest('.opt'); if(!b) return;
+      var q=b.closest('.q'); if(q) q.classList.add('risposta');
+      var risposte=t.querySelectorAll('.q.risposta').length;
+      if(risposte>=tot){
+        var riq=t.querySelector('.riquadro'), nav=t.querySelector('.passo-nav');
+        if(riq) riq.hidden=true;
+        if(nav) nav.hidden=true;
+        if(bar) bar.style.width='100%';
+        return;                       // il risultato lo mostra il gestore del test
+      }
+      setTimeout(function(){ mostra(i+1); }, 220);
+    });
+
+    mostra(0);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();

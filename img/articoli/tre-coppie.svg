@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 190" role="img" aria-label="Tre coppie: in ognuna un lato è pieno e l'altro tenue">
+  <title>Mano, piede, spalla: in ognuno un lato conduce</title>
+  <ellipse cx="176" cy="92" rx="17" ry="28" fill="#5E9C86" opacity="0.3"/>
+  <ellipse cx="264" cy="92" rx="20" ry="32" fill="#D98A2B" opacity="1.0"/>
+  <line x1="220" y1="44" x2="220" y2="140" stroke="#D2CBBA" stroke-width="1.1"/>
+  <ellipse cx="456" cy="92" rx="20" ry="32" fill="#D98A2B" opacity="1.0"/>
+  <ellipse cx="544" cy="92" rx="17" ry="28" fill="#5E9C86" opacity="0.3"/>
+  <line x1="500" y1="44" x2="500" y2="140" stroke="#D2CBBA" stroke-width="1.1"/>
+  <ellipse cx="736" cy="92" rx="17" ry="28" fill="#5E9C86" opacity="0.3"/>
+  <ellipse cx="824" cy="92" rx="20" ry="32" fill="#D98A2B" opacity="1.0"/>
+  <line x1="780" y1="44" x2="780" y2="140" stroke="#D2CBBA" stroke-width="1.1"/>
+  <line x1="360" y1="58" x2="360" y2="126" stroke="#D2CBBA" stroke-width="1"/>
+  <line x1="640" y1="58" x2="640" y2="126" stroke="#D2CBBA" stroke-width="1"/>
+</svg>
