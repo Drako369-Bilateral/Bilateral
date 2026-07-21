@@ -814,3 +814,41 @@ body{padding-top:64px}
 .voce-badge{display:inline-block;margin-left:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;
   text-transform:uppercase;font-weight:700;color:#16150F;background:var(--amber);border-radius:999px;padding:3px 9px;vertical-align:middle}
 @media(max-width:640px){.voce.spicco{padding-left:16px}}
+
+
+/* Schema esplicativo dentro il corpo dell'articolo */
+.fig-schema{margin:34px 0 30px}
+.fig-schema img{width:100%;height:auto;display:block;border-radius:3px}
+
+/* Figura verticale dentro un articolo, con credito */
+.fig-opera{margin:44px auto 34px;max-width:520px}
+.fig-opera img{width:100%;height:auto;display:block;border-radius:3px}
+.fig-opera figcaption{margin-top:14px;font-size:14.5px;line-height:1.6;color:var(--ink-soft)}
+.fig-opera .credito{display:block;margin-top:8px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--stone)}
+.fig-opera .credito a{color:var(--stone);text-decoration:underline;text-underline-offset:2px}
+.on-void .fig-opera figcaption{color:#C7C1B2}
+
+/* Apertura d'articolo con opera a fianco */
+.art-hero-duo{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center}
+.art-hero-duo .art-hero-txt{min-width:0}
+.art-hero-duo figure{margin:0}
+.art-hero-duo img{width:100%;height:auto;display:block;border-radius:3px}
+.art-hero-duo figcaption{margin-top:12px;font-size:13px;line-height:1.55;color:#B4AE9F}
+.art-hero-duo .credito{display:block;margin-top:6px;font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--stone)}
+.art-hero-duo .credito a{color:var(--stone);text-decoration:underline;text-underline-offset:2px}
+@media(max-width:820px){
+  .art-hero-duo{grid-template-columns:1fr;gap:32px}
+  .art-hero-duo figure{max-width:340px;margin:0 auto}
+}
+
+/* Illustrazione a fianco di ogni regime */
+.regime{display:grid;grid-template-columns:132px 1fr;gap:26px;align-items:start;margin:30px 0 34px}
+.regime img{width:132px;height:132px;display:block;border-radius:3px}
+.regime .regime-txt h3{margin-top:0}
+.regime .regime-txt p:last-child{margin-bottom:0}
+@media(max-width:620px){
+  .regime{grid-template-columns:1fr;gap:14px}
+  .regime img{width:112px;height:112px}
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-label="Otto posizioni disponibili attorno a un centro non ancora scelto">
+  <rect width="520" height="520" fill="#ECE7DB"/>
+  <circle cx="260.0" cy="260.0" r="182" fill="none" stroke="#D2CBBA" stroke-width="1.4"/>
+  <circle cx="260.0" cy="78.0" r="13" fill="#D2CBBA"/>
+  <line x1="260.0" y1="204.0" x2="260.0" y2="96.0" stroke="#D2CBBA" stroke-width="1.2" stroke-dasharray="5 7"/>
+  <circle cx="388.7" cy="131.3" r="13" fill="#D2CBBA"/>
+  <line x1="299.6" y1="220.4" x2="376.0" y2="144.0" stroke="#D2CBBA" stroke-width="1.2" stroke-dasharray="5 7"/>
+  <circle cx="442.0" cy="260.0" r="13" fill="#D2CBBA"/>
+  <line x1="316.0" y1="260.0" x2="424.0" y2="260.0" stroke="#D2CBBA" stroke-width="1.2" stroke-dasharray="5 7"/>
+  <circle cx="388.7" cy="388.7" r="13" fill="#D2CBBA"/>
+  <line x1="299.6" y1="299.6" x2="376.0" y2="376.0" stroke="#D2CBBA" stroke-width="1.2" stroke-dasharray="5 7"/>
+  <circle cx="260.0" cy="442.0" r="13" fill="#D2CBBA"/>
+  <line x1="260.0" y1="316.0" x2="260.0" y2="424.0" stroke="#D2CBBA" stroke-width="1.2" stroke-dasharray="5 7"/>
+  <circle cx="131.3" cy="388.7" r="13" fill="#D2CBBA"/>
+  <line x1="220.4" y1="299.6" x2="144.0" y2="376.0" stroke="#D2CBBA" stroke-width="1.2" stroke-dasharray="5 7"/>
+  <circle cx="78.0" cy="260.0" r="13" fill="#D2CBBA"/>
+  <line x1="204.0" y1="260.0" x2="96.0" y2="260.0" stroke="#D2CBBA" stroke-width="1.2" stroke-dasharray="5 7"/>
+  <circle cx="131.3" cy="131.3" r="13" fill="#D2CBBA"/>
+  <line x1="220.4" y1="220.4" x2="144.0" y2="144.0" stroke="#D2CBBA" stroke-width="1.2" stroke-dasharray="5 7"/>
+  <circle cx="260.0" cy="260.0" r="44" fill="none" stroke="#966EA8" stroke-width="3"/>
+  <circle cx="260.0" cy="260.0" r="9" fill="#966EA8"/>
+</svg>
