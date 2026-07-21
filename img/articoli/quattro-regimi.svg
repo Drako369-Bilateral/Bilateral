@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="I quattro regimi: simmetria indifferente, asimmetria fissata, asimmetria reversibile, sospensione">
+  <title>I quattro regimi</title>
+  <rect width="1200" height="420" fill="#ECE7DB"/>
+  <rect x="124.0" y="66" width="52" height="26" fill="#547CA8"/>
+  <text x="150.0" y="85" fill="#ECE7DB" font-family="monospace" font-size="15" text-anchor="middle" letter-spacing="1">01</text>
+  <circle cx="122.0" cy="190" r="15" fill="#547CA8"/>
+  <circle cx="178.0" cy="190" r="15" fill="#547CA8"/>
+  <text x="150.0" y="292" fill="#16150F" font-family="serif" font-size="25" text-anchor="middle">Simmetria</text>
+  <text x="150.0" y="324" fill="#547CA8" font-family="serif" font-size="24" font-style="italic" text-anchor="middle">indifferente</text>
+  <line x1="300.0" y1="46" x2="300.0" y2="380" stroke="#D2CBBA" stroke-width="1.5"/>
+  <rect x="424.0" y="66" width="52" height="26" fill="#C6583A"/>
+  <text x="450.0" y="85" fill="#ECE7DB" font-family="monospace" font-size="15" text-anchor="middle" letter-spacing="1">02</text>
+  <circle cx="420.0" cy="190" r="20" fill="#C6583A"/>
+  <circle cx="480.0" cy="190" r="9" fill="#D2CBBA"/>
+  <text x="450.0" y="292" fill="#16150F" font-family="serif" font-size="25" text-anchor="middle">Asimmetria</text>
+  <text x="450.0" y="324" fill="#C6583A" font-family="serif" font-size="24" font-style="italic" text-anchor="middle">fissata</text>
+  <line x1="600.0" y1="46" x2="600.0" y2="380" stroke="#D2CBBA" stroke-width="1.5"/>
+  <rect x="724.0" y="66" width="52" height="26" fill="#D98A2B"/>
+  <text x="750.0" y="85" fill="#ECE7DB" font-family="monospace" font-size="15" text-anchor="middle" letter-spacing="1">03</text>
+  <circle cx="722.0" cy="190" r="17" fill="#D98A2B"/>
+  <circle cx="778.0" cy="190" r="17" fill="#5E9C86"/>
+  <line x1="742.0" y1="190" x2="758.0" y2="190" stroke="#8A8578" stroke-width="2.4"/>
+  <text x="750.0" y="292" fill="#16150F" font-family="serif" font-size="25" text-anchor="middle">Asimmetria</text>
+  <text x="750.0" y="324" fill="#D98A2B" font-family="serif" font-size="24" font-style="italic" text-anchor="middle">reversibile</text>
+  <line x1="900.0" y1="46" x2="900.0" y2="380" stroke="#D2CBBA" stroke-width="1.5"/>
+  <rect x="1024.0" y="66" width="52" height="26" fill="#966EA8"/>
+  <text x="1050.0" y="85" fill="#ECE7DB" font-family="monospace" font-size="15" text-anchor="middle" letter-spacing="1">04</text>
+  <circle cx="1016.0" cy="190" r="11" fill="#D2CBBA"/>
+  <circle cx="1084.0" cy="190" r="11" fill="#D2CBBA"/>
+  <circle cx="1050.0" cy="190" r="12" fill="none" stroke="#966EA8" stroke-width="3"/>
+  <text x="1050.0" y="292" fill="#16150F" font-family="serif" font-size="25" text-anchor="middle">Sospensione</text>
+  <text x="1050.0" y="324" fill="#966EA8" font-family="serif" font-size="24" font-style="italic" text-anchor="middle">il centro</text>
+</svg>
