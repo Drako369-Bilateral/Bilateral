@@ -796,3 +796,9 @@ body{padding-top:64px}
 .ma-h1 .ma-a{display:block;font-family:var(--text);font-style:italic;font-weight:400;letter-spacing:0;
   color:var(--amber);line-height:1.12;}
 @media (max-width:640px){.ma-h1 .ma-q{font-size:.72em;margin-bottom:.4em}}
+
+/* --- barra: otto voci, larghezze intermedie --- */
+.nav-links{flex-wrap:nowrap;}
+.nav-links a{white-space:nowrap;}
+@media (max-width:1460px){ .nav-links{gap:16px;} .nav-links a{font-size:11.5px; letter-spacing:.02em;} }
+@media (max-width:1320px){ .nav-links{gap:12px;} .nav-links a{font-size:11px;} .nav .mark .name{display:none;} }
