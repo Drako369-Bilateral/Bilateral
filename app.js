@@ -92,6 +92,34 @@
     document.querySelectorAll('a[data-it^="Vieni marted"], a[href*="/camminata/"], a[href*="/en/walk/"]').forEach(function(a){ a.addEventListener('click', function(){ ev('cta_camminata',{pagina:path}); }); });
     document.querySelectorAll('a[href^="http"]').forEach(function(a){ if(a.hostname && a.hostname!==location.hostname){ a.addEventListener('click', function(){ ev('link_esterno',{url:a.href}); }); } });
     document.querySelectorAll('[data-ev]').forEach(function(el){ el.addEventListener('click', function(){ ev(el.getAttribute('data-ev'),{pagina:path}); }); });
+
+    /* Profondita di lettura: 25/50/75/100% del corpo articolo, una volta per soglia. */
+    (function(){
+      var art = document.querySelector('.article');
+      if(!art) return;
+      var soglie = [25,50,75,100], fatte = {}, ticking = false;
+      function controlla(){
+        ticking = false;
+        var box = art.getBoundingClientRect();
+        var letto = window.innerHeight - box.top;
+        if(letto <= 0) return;
+        var perc = Math.min(100, Math.round(letto / box.height * 100));
+        for(var i=0;i<soglie.length;i++){
+          var s = soglie[i];
+          if(perc >= s && !fatte[s]){
+            fatte[s] = true;
+            ev('profondita_lettura', {percentuale: s, pagina: path});
+          }
+        }
+        if(fatte[100]) window.removeEventListener('scroll', onScroll);
+      }
+      function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(controlla); } }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      controlla();
+
+      /* Tempo di permanenza: un solo evento a 30 secondi, per distinguere lettura da rimbalzo. */
+      setTimeout(function(){ ev('lettura_30s', {pagina: path}); }, 30000);
+    })();
   });
 })();
 
